@@ -4,7 +4,10 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT2RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT4ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT4Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT5Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT3Dto;
 import org.springframework.stereotype.Service;
 
@@ -69,4 +72,43 @@ public class OrdenTransferenciaMapper {
 		ordenTransferenciaCT3ResponseDto.setCt3Dto(ct3Dto);
 		return ordenTransferenciaCT3ResponseDto;
 	}
+	
+	public OrdenTransferenciaCT5ResponseDto getOrdenTransferenciaCT5Mapper(OrdenTransferenciaCT5RequestDto request) {
+		
+		OrdenTransferenciaCT5ResponseDto ordenTransferenciaCT5ResponseDto = new OrdenTransferenciaCT5ResponseDto();
+		CT5Dto ct5Dto = new CT5Dto();
+		ct5Dto.setDebtorParticipantCode(request.getCt5dto().getDebtorParticipantCode());
+		ct5Dto.setCreditorParticipantCode(request.getCt5dto().getCreditorParticipantCode());
+		ct5Dto.setResponseDate(request.getCt5dto().getResponseDate());
+		ct5Dto.setResponseTime(request.getCt5dto().getResponseTime());
+		ct5Dto.setTerminalId(request.getCt5dto().getTerminalId());
+		ct5Dto.setRetrievalReferenteNumber(request.getCt5dto().getRetrievalReferenteNumber());
+		ct5Dto.setTrace(request.getCt5dto().getTrace());
+		ct5Dto.setCurrency(request.getCt5dto().getCurrency());
+		ct5Dto.setTransactionReference(request.getCt5dto().getTransactionReference());
+		ct5Dto.setResponseCode(request.getCt5dto().getResponseCode());
+		ct5Dto.setFeeAmount(request.getCt5dto().getFeeAmount());
+		ct5Dto.setSettlementDate(request.getCt5dto().getSettlementDate());
+		ct5Dto.setTransactionType(request.getCt5dto().getTransactionType());
+		ct5Dto.setDebtorCCI(request.getCt5dto().getDebtorCCI());
+		ct5Dto.setCreditorCCI(request.getCt5dto().getCreditorCCI());
+		ct5Dto.setCreditorCreditCard(request.getCt5dto().getCreditorCreditCard());
+		ct5Dto.setSameCustomerFlag(request.getCt5dto().getSameCustomerFlag());
+		ct5Dto.setInstructionId(request.getCt5dto().getInstructionId());
+		ct5Dto.setCreationDate(request.getCt5dto().getCreationDate());
+		ct5Dto.setCreationTime(request.getCt5dto().getCreationTime());
+		ct5Dto.setChannel(request.getCt5dto().getChannel());
+		ct5Dto.setInterbankSettlementAmount(request.getCt5dto().getInterbankSettlementAmount());
+	
+		ordenTransferenciaCT5ResponseDto.setCt5dto(ct5Dto);
+		
+		return ordenTransferenciaCT5ResponseDto;
+		
+		
+		
+		
+		
+			
+		}
+		
 }

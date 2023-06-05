@@ -6,6 +6,8 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT2RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT4ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV2RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT2Dto;
@@ -74,37 +76,12 @@ public class TransferenciaInmediataController {
 	}
 	
 	
+	
 	@PostMapping(value = "/CT5")
-	public ResponseEntity<WsBTRespuestaTranferenciaTINResponseDto> getWsBTrespuestaTransferencia(@RequestBody WsBTRespuestaTranferenciaTINDto request) {
+	public ResponseEntity<OrdenTransferenciaCT5ResponseDto> getWsBTOrdenTransferenciaCT5(@RequestBody OrdenTransferenciaCT5RequestDto request) {
 		
-		
-		WsBTRespuestaTranferenciaTINResponseDto respuestaTransferenciaresponse = new WsBTRespuestaTranferenciaTINResponseDto();
-		respuestaTransferenciaresponse.setDebtorParticipantCode(request.getDebtorParticipantCode());
-		respuestaTransferenciaresponse.setCreditorParticipantCode(request.getCreditorParticipantCode());
-		respuestaTransferenciaresponse.setResponseDate(request.getResponseDate());
-		respuestaTransferenciaresponse.setResponseTime(request.getResponseTime());
-		respuestaTransferenciaresponse.setTerminalId(request.getTerminalId());
-		respuestaTransferenciaresponse.setRetrievalReferenteNumber(request.getRetrievalReferenteNumber());
-		respuestaTransferenciaresponse.setTrace(request.getTrace());
-		respuestaTransferenciaresponse.setAmountprivate(request.getAmountprivate());
-		respuestaTransferenciaresponse.setCurrency(request.getCurrency());
-		respuestaTransferenciaresponse.setTransactionReference(request.getTransactionReference());
-		respuestaTransferenciaresponse.setResponseCode(request.getResponseCode());
-		respuestaTransferenciaresponse.setFeeAmount(request.getFeeAmount());
-		respuestaTransferenciaresponse.setSettlementDate(request.getSettlementDate());
-		respuestaTransferenciaresponse.setTransactionType(request.getTransactionType());
-		respuestaTransferenciaresponse.setDebtorCCI(request.getDebtorCCI());
-		respuestaTransferenciaresponse.setCreditorCCI(request.getCreditorCCI());
-		respuestaTransferenciaresponse.setCreditorCreditCard(request.getCreditorCreditCard());
-		respuestaTransferenciaresponse.setSameCustomerFlag(request.getSameCustomerFlag());
-		respuestaTransferenciaresponse.setInstructionId(request.getInstructionId());
-		respuestaTransferenciaresponse.setCreationDate(request.getCreationDate());
-		respuestaTransferenciaresponse.setCreationTime(request.getCreationTime());
-		respuestaTransferenciaresponse.setChannel(request.getChannel());
-		respuestaTransferenciaresponse.setInterbankSettlementAmount(request.getInterbankSettlementAmount());
-		
-		
-		return new ResponseEntity<WsBTRespuestaTranferenciaTINResponseDto>(respuestaTransferenciaresponse, HttpStatus.CREATED);
+		OrdenTransferenciaCT5ResponseDto response = ordenTransferenciaService.getOrdenTransferenciaCT5(request);
+		return new ResponseEntity<OrdenTransferenciaCT5ResponseDto>(response, HttpStatus.CREATED);
 		
 	}
 	
