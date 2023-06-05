@@ -1,6 +1,6 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.dto;
 
-public class WsBTOrdenTranferenciaTINDto {
+public class CT2Dto {
 	
 	private String debtorParticipantCode;
 	private String creditorParticipantCode;
@@ -42,11 +42,12 @@ public class WsBTOrdenTranferenciaTINDto {
 	private String settlementDate;
 	private String instructionId;
 	private String interbankSettlementAmount;
-	public WsBTOrdenTranferenciaTINDto() {
+	
+	public CT2Dto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public WsBTOrdenTranferenciaTINDto(String debtorParticipantCode, String creditorParticipantCode,
+	public CT2Dto(String debtorParticipantCode, String creditorParticipantCode,
 			String creationDate, String creationTime, String terminalId, String retrievalReferenteNumber, String trace,
 			String channel, String amountprivate, String transactionReference, String referenceTransactionId,
 			String transactionType, String feeAmount, String feeCode, String applicationCriteria,

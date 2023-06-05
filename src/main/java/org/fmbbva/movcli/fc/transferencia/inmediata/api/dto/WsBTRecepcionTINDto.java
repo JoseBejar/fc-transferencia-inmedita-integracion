@@ -8,29 +8,30 @@ public class WsBTRecepcionTINDto {
 	private String creditorParticipantCode;
 	private String creationDate;
 	private String creationTime;
-	private String terminalId ; 
-	private String retrievalReferenteNumber ;
-	private String   trace ; 
-	private String  debtorName ; 
-	private String debtorId ; 
-	private String  debtorIdCode ; 
-	private String debtorPhoneNumber ; 
-	private String debtorAddressLine ; 
-	private String debtorMobileNumber ; 
-	private String transactionType ; 
-	private String channel ;
-	private String creditorAddressLine ;
-	private String creditorPhoneNumber ; 
-	private String creditorMobileNumber ; 
+	private String terminalId; 
+	private String retrievalReferenteNumber;
+	private String trace; 
+	private String  debtorName; 
+	private String debtorId; 
+	private String  debtorIdCode; 
+	private String debtorPhoneNumber; 
+	private String debtorAddressLine; 
+	private String debtorMobileNumber; 
+	private String transactionType; 
+	private String channel;
+	private String creditorAddressLine;
+	private String creditorPhoneNumber; 
+	private String creditorMobileNumber; 
 	private String creditorCCI ; 
-	private String creditorCreditCard ; 
-	private String debtorTypeOfPerson ; 
-	private String currency ; 
-	private String proxyValue ;
-	private String  proxyType ;
+	private String creditorCreditCard; 
+	private String debtorTypeOfPerson; 
+	private String currency; 
+	private String proxyValue;
+	private String proxyType;
+	
 	public WsBTRecepcionTINDto() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 	public WsBTRecepcionTINDto(String debtorParticipantCode, String creditorParticipantCode, String creationDate,
 			String creationTime, String terminalId, String retrievalReferenteNumber, String trace, String debtorName,
