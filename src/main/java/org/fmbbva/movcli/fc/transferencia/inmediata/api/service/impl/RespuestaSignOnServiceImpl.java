@@ -2,8 +2,8 @@ package org.fmbbva.movcli.fc.transferencia.inmediata.api.service.impl;
 
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper.RespuestaSignOn1Mapper;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.RespuestaSignOnService;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOn.dto.RespuestaSignOn1RequestDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOn.dto.RespuestaSignOn2ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signon.dto.RespuestaSignOn1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signon.dto.RespuestaSignOn2ResponseDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

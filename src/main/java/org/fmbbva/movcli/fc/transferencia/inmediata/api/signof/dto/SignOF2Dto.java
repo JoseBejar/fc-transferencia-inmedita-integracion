@@ -1,18 +1,17 @@
-package org.fmbbva.movcli.fc.transferencia.inmediata.api.signOn.dto;
+package org.fmbbva.movcli.fc.transferencia.inmediata.api.signof.dto;
 
-public class SignON2Dto {
-	
+public class SignOF2Dto {
 	private String participantCode;
 	private String responseDate;
 	private String responseTime;
 	private String status;
 	private String reasonCode;
 	private String trace;
-	public SignON2Dto() {
+	public SignOF2Dto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public SignON2Dto(String participantCode, String responseDate, String responseTime, String status,
+	public SignOF2Dto(String participantCode, String responseDate, String responseTime, String status,
 			String reasonCode, String trace) {
 		super();
 		this.participantCode = participantCode;
@@ -58,6 +57,11 @@ public class SignON2Dto {
 	public void setTrace(String trace) {
 		this.trace = trace;
 	}
-
 	
+	
+	
+	
+	
+	
+
 }

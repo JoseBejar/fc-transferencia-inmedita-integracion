@@ -1,4 +1,4 @@
-package org.fmbbva.movcli.fc.transferencia.inmediata.api.signOn.dto;
+package org.fmbbva.movcli.fc.transferencia.inmediata.api.signon.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

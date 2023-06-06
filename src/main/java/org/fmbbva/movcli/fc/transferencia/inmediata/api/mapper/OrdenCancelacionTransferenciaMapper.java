@@ -1,8 +1,8 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper;
 
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto.CTC2Dto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto.CancelacionOrdenTransfCTC1RequestDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto.CancelacionOrdenTransfCTC2ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CTC2Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CancelacionOrdenTransfCTC1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CancelacionOrdenTransfCTC2ResponseDto;
 import org.springframework.stereotype.Service;
 
 @Service

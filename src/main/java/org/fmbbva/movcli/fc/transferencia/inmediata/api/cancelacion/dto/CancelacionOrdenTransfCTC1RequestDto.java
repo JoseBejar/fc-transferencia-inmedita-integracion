@@ -1,9 +1,9 @@
-package org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto;
+package org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelacionOrdenTransfCTC1RequestDto {
-	
+
 	@JsonProperty("CTC1")
 	private CTC1Dto ctc1Dto;
 
@@ -24,10 +24,5 @@ public class CancelacionOrdenTransfCTC1RequestDto {
 		super();
 		this.ctc1Dto = ctc1Dto;
 	}
-	
-	
-	
-		
-
 
 }

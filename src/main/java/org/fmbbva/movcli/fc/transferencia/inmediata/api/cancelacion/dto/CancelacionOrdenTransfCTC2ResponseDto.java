@@ -1,4 +1,4 @@
-package org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto;
+package org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -24,8 +24,5 @@ public class CancelacionOrdenTransfCTC2ResponseDto {
 	public void setCtc2Dto(CTC2Dto ctc2Dto) {
 		this.ctc2Dto = ctc2Dto;
 	}
-	
-	
-	
-	
+
 }

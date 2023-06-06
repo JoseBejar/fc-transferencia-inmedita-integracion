@@ -36,8 +36,6 @@ public class SolicitudEstadoPagoMapper {
 		solicitudEstadoPagoRCTC2ResponsetDto.setCtc2Dto(rctc2Dto);
 		return solicitudEstadoPagoRCTC2ResponsetDto;
 		
-	
-		
 	}
 	
 

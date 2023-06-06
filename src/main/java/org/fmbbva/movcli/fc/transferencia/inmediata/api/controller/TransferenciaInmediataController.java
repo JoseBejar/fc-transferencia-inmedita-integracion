@@ -10,8 +10,8 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV2RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto.CancelacionOrdenTransfCTC1RequestDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto.CancelacionOrdenTransfCTC2ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CancelacionOrdenTransfCTC1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CancelacionOrdenTransfCTC2ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT3Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTRecepcionTINDto;
@@ -26,10 +26,10 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.OrdenTransferenc
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.RespuestaSignOfService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.RespuestaSignOnService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.SolicitudEstadoPagoService;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOf.dto.RespuestaSignOf1RequestDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOf.dto.RespuestaSignOf2ResponseDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOn.dto.RespuestaSignOn1RequestDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOn.dto.RespuestaSignOn2ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signof.dto.RespuestaSignOf1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signof.dto.RespuestaSignOf2ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signon.dto.RespuestaSignOn1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signon.dto.RespuestaSignOn2ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.SolicitudEstadoPagoRCTC1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.SolicitudEstadoPagoRCTC2ResponsetDto;
 import org.springframework.beans.factory.annotation.Autowired;

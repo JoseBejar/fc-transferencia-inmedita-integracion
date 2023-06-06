@@ -1,6 +1,6 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto;
 
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto.CTC1Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CTC1Dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
