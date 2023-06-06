@@ -9,5 +9,7 @@ public class FcTransferenciaInmediataIntegracionApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FcTransferenciaInmediataIntegracionApplication.class, args);
 	}
+	
+	
 
 }

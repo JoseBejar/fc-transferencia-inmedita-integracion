@@ -1,5 +1,7 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.dto;
 
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV2Dto;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ConsultaCuentaAV2RequestDto {

@@ -10,6 +10,8 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV2RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto.CancelacionOrdenTransfCTC1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.Cancelacion.dto.CancelacionOrdenTransfCTC2ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT3Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTRecepcionTINDto;
@@ -18,12 +20,22 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTRespuestaTranfer
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTRespuestaTranferenciaTINResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTTransferenciaTINDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTTransferenciaTINResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.CancelacionOrdenTransService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.ConsultaCuentaService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.OrdenTransferenciaService;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.RespuestaSignOfService;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.RespuestaSignOnService;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.SolicitudEstadoPagoService;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOf.dto.RespuestaSignOf1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOf.dto.RespuestaSignOf2ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOn.dto.RespuestaSignOn1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.signOn.dto.RespuestaSignOn2ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.SolicitudEstadoPagoRCTC1RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.SolicitudEstadoPagoRCTC2ResponsetDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +50,18 @@ public class TransferenciaInmediataController {
 	
 	@Autowired
 	private OrdenTransferenciaService ordenTransferenciaService;
+	
+	@Autowired
+	private CancelacionOrdenTransService cancelacionOrdenTransService;
+	
+	@Autowired
+	private SolicitudEstadoPagoService solicitudEstadoPagoService;
+	
+	@Autowired
+	private RespuestaSignOnService respuestaSignOnService;
+	
+	@Autowired
+	private RespuestaSignOfService respuestaSignOfService;
 	
 	
 	@PostMapping(value = "/AV1")
@@ -84,6 +108,43 @@ public class TransferenciaInmediataController {
 		return new ResponseEntity<OrdenTransferenciaCT5ResponseDto>(response, HttpStatus.CREATED);
 		
 	}
+	
+
+	@PostMapping(value = "/CTC1")
+	public ResponseEntity<CancelacionOrdenTransfCTC2ResponseDto> getOrdenCancelTransCTC1(@RequestBody CancelacionOrdenTransfCTC1RequestDto request) {
+		
+		CancelacionOrdenTransfCTC2ResponseDto response = cancelacionOrdenTransService.getCancelacionOrdenTransCTC1(request);
+		return new ResponseEntity<CancelacionOrdenTransfCTC2ResponseDto>(response, HttpStatus.CREATED);
+		
+	}
+	
+	
+	@PostMapping(value = "/RCTC1")
+	public ResponseEntity<SolicitudEstadoPagoRCTC2ResponsetDto> getSolicitudEstadoPagoRCT1(@RequestBody SolicitudEstadoPagoRCTC1RequestDto request) {
+		
+		SolicitudEstadoPagoRCTC2ResponsetDto response = solicitudEstadoPagoService.getSolicitudEstadoPagoRCTC1(request);
+		return new ResponseEntity<SolicitudEstadoPagoRCTC2ResponsetDto>(response, HttpStatus.CREATED);
+		
+	}
+	
+	@PostMapping(value = "/SIGNON")
+	public ResponseEntity<RespuestaSignOn2ResponseDto> getRespuestaSignOn1(@RequestBody RespuestaSignOn1RequestDto request) {
+		
+		RespuestaSignOn2ResponseDto response = respuestaSignOnService.getRespuestaSignOn1(request);
+		return new ResponseEntity<RespuestaSignOn2ResponseDto>(response, HttpStatus.CREATED);
+		
+	}
+	
+	@PostMapping(value = "/SIGNOF")
+	public ResponseEntity<RespuestaSignOf2ResponseDto> getRespuestaSignOf1(@RequestBody RespuestaSignOf1RequestDto request) {
+		
+		RespuestaSignOf2ResponseDto response = respuestaSignOfService.getRespuestaSignOf1(request);
+		return new ResponseEntity<RespuestaSignOf2ResponseDto>(response, HttpStatus.CREATED);
+		
+	}
+	
+	
+	
 	
 	
 	

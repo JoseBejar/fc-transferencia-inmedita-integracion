@@ -4,12 +4,9 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV1Req
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV2RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV4ResponseDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5RequestDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5ResponseDto;
 import org.springframework.stereotype.Service;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.AV3Dto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.AV4Dto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT5Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV3Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV4Dto;
 
 @Service
 public class ConsultaCuentaMapper {

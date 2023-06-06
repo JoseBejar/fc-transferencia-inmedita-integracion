@@ -99,14 +99,8 @@ public class OrdenTransferenciaMapper {
 		ct5Dto.setCreationTime(request.getCt5dto().getCreationTime());
 		ct5Dto.setChannel(request.getCt5dto().getChannel());
 		ct5Dto.setInterbankSettlementAmount(request.getCt5dto().getInterbankSettlementAmount());
-	
 		ordenTransferenciaCT5ResponseDto.setCt5dto(ct5Dto);
-		
 		return ordenTransferenciaCT5ResponseDto;
-		
-		
-		
-		
 		
 			
 		}
