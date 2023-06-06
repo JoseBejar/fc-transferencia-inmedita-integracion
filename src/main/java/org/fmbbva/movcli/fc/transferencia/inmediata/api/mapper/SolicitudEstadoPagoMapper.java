@@ -3,7 +3,10 @@ package org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.RCTC2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.SolicitudEstadoPagoRCTC1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.SolicitudEstadoPagoRCTC2ResponsetDto;
+import org.springframework.stereotype.Service;
 
+
+@Service
 public class SolicitudEstadoPagoMapper {
 	
 	public SolicitudEstadoPagoRCTC2ResponsetDto getSolicitudEstadoPagoRCTC1(SolicitudEstadoPagoRCTC1RequestDto request)

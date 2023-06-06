@@ -3,8 +3,10 @@ package org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.signof.dto.RespuestaSignOf1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.signof.dto.RespuestaSignOf2ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.signof.dto.SignOF2Dto;
+import org.springframework.stereotype.Service;
 
 
+@Service
 public class RespuestaSignOfMapper {
 	
 	public RespuestaSignOf2ResponseDto getRespuestaSignOf1(RespuestaSignOf1RequestDto request){

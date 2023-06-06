@@ -8,20 +8,15 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT4ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestRequestET1Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestResponseET2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV2RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CancelacionOrdenTransfCTC1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CancelacionOrdenTransfCTC2ResponseDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT2Dto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT3Dto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTRecepcionTINDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTRecepcionTINResponseDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTRespuestaTranferenciaTINDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTRespuestaTranferenciaTINResponseDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTTransferenciaTINDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.WsBTTransferenciaTINResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.CancelacionOrdenTransService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.ConsultaCuentaService;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.EchoTestService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.OrdenTransferenciaService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.RespuestaSignOfService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.RespuestaSignOnService;
@@ -62,6 +57,9 @@ public class TransferenciaInmediataController {
 	
 	@Autowired
 	private RespuestaSignOfService respuestaSignOfService;
+	
+	@Autowired
+	private EchoTestService echoTestService;
 	
 	
 	@PostMapping(value = "/AV1")
@@ -141,6 +139,12 @@ public class TransferenciaInmediataController {
 		RespuestaSignOf2ResponseDto response = respuestaSignOfService.getRespuestaSignOf1(request);
 		return new ResponseEntity<RespuestaSignOf2ResponseDto>(response, HttpStatus.CREATED);
 		
+	}
+	
+	public ResponseEntity<EchoTestResponseET2Dto> getEchoTestRespuesta1(@RequestBody EchoTestRequestET1Dto request){
+		
+		EchoTestResponseET2Dto response = echoTestService.getEchoTest1(request);
+		return new ResponseEntity<EchoTestResponseET2Dto>(response,HttpStatus.CREATED);
 	}
 	
 	
