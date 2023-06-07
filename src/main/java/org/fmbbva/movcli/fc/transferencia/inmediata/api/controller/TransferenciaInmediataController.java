@@ -140,7 +140,7 @@ public class TransferenciaInmediataController {
 		return new ResponseEntity<RespuestaSignOf2ResponseDto>(response, HttpStatus.CREATED);
 		
 	}
-	
+	@PostMapping(value = "/ECHOTEST")
 	public ResponseEntity<EchoTestResponseET2Dto> getEchoTestRespuesta1(@RequestBody EchoTestRequestET1Dto request){
 		
 		EchoTestResponseET2Dto response = echoTestService.getEchoTest1(request);
