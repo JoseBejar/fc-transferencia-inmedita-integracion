@@ -275,8 +275,54 @@ public class AV2Dto {
 
 	public void setBranchId(String branchId) {
 		this.branchId = branchId;
+	} 
+	
+	   @Override
+	public String toString() {
+		return "AV2Dto [debtorParticipantCode=" + debtorParticipantCode + ", creditorParticipantCode="
+				+ creditorParticipantCode + ", creationDate=" + creationDate + ", creationTime=" + creationTime
+				+ ", terminalId=" + terminalId + ", retrievalReferenteNumber=" + retrievalReferenteNumber + ", trace="
+				+ trace + ", debtorName=" + debtorName + ", debtorId=" + debtorId + ", debtorIdCode=" + debtorIdCode
+				+ ", debtorPhoneNumber=" + debtorPhoneNumber + ", debtorAddressLine=" + debtorAddressLine
+				+ ", debtorMobileNumber=" + debtorMobileNumber + ", transactionType=" + transactionType + ", channel="
+				+ channel + ", creditorAddressLine=" + creditorAddressLine + ", creditorPhoneNumber="
+				+ creditorPhoneNumber + ", creditorMobileNumber=" + creditorMobileNumber + ", creditorCCI="
+				+ creditorCCI + ", creditorCreditCard=" + creditorCreditCard + ", debtorTypeOfPerson="
+				+ debtorTypeOfPerson + ", currency=" + currency + ", proxyValue=" + proxyValue + ", proxyType="
+				+ proxyType + ", instructionId=" + instructionId + ", branchId=" + branchId + "]";
 	}
 	   
-	   
+	   public String buildJSON() {
+		    StringBuilder sb = new StringBuilder();
+		    sb.append("{\"AV2\":{");
+		    sb.append("\"debtorParticipantCode\": \"" + getDebtorParticipantCode() + "\",");
+		    sb.append("\"creditorParticipantCode\": \"" + getCreditorParticipantCode()+ "\",");
+		    sb.append("\"creationDate\": \"" + getCreationDate() + "\",");
+			sb.append("\"creationTime\": \"" + getCreationTime() + "\",");
+		    sb.append("\"terminalId\": \"" + getTerminalId() + "\",");
+		    sb.append("\"retrievalReferenteNumber\": \"" + getRetrievalReferenteNumber() + "\",");
+			sb.append("\"trace\": \"" + getTrace() + "\",");
+		    sb.append("\"debtorName\": \"" + getDebtorName() + "\",");
+			sb.append("\"debtorId\": \"" + getDebtorId() + "\",");
+		    sb.append("\"debtorIdCode\": \"" + getDebtorIdCode() + "\",");
+			sb.append("\"debtorPhoneNumber\": \"" + getDebtorPhoneNumber() + "\",");
+		    sb.append("\"debtorAddressLine\": \"" + getRetrievalReferenteNumber() + "\",");
+			sb.append("\"debtorMobileNumber\": \"" + getDebtorAddressLine() + "\",");
+		    sb.append("\"transactionType\": \"" + getTransactionType() + "\",");
+			sb.append("\"channel\": \"" + getChannel() + "\",");
+		    sb.append("\"creditorAddressLine\": \"" + getCreditorAddressLine() + "\",");
+			sb.append("\"creditorPhoneNumber\": \"" + getCreditorPhoneNumber() + "\",");
+		    sb.append("\"creditorMobileNumber\": \"" + getCreditorMobileNumber() + "\",");
+			sb.append("\"creditorCCI\": \"" + getCreditorCCI() + "\",");
+		    sb.append("\"creditorCreditCard\": \"" + getCreditorCreditCard() + "\",");
+			sb.append("\"debtorTypeOfPerson\": \"" + getDebtorTypeOfPerson() + "\",");
+		    sb.append("\"currency\": \"" + getCurrency() + "\",");
+			sb.append("\"proxyValue\": \"" + getProxyValue() + "\",");
+		    sb.append("\"proxyType\": \"" + getProxyType() + "\"");
+		    sb.append("}");
+		    sb.append("}");
+		    return sb.toString();
+		}
+
 	   
 }
