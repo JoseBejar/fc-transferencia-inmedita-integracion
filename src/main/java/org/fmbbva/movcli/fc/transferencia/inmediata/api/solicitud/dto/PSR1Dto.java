@@ -1,6 +1,6 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto;
 
-public class RCTC1Dto {
+public class PSR1Dto {
 	
 	
 	private String creditorParticipantCode;
@@ -10,11 +10,11 @@ public class RCTC1Dto {
 	private String instructionId;
 	private String originalCreationDate;
 	private String originalCreationTime;
-	public RCTC1Dto() {
+	public PSR1Dto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public RCTC1Dto(String creditorParticipantCode, String creationDate, String creationTime, String currency,
+	public PSR1Dto(String creditorParticipantCode, String creationDate, String creationTime, String currency,
 			String instructionId, String originalCreationDate, String originalCreationTime) {
 		super();
 		this.creditorParticipantCode = creditorParticipantCode;

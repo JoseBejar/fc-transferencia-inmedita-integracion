@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ConsultaCuentaAV4ResponseDto {
 	
+	
+	
+	
 	@JsonProperty("AV4")
 	private AV4Dto av4;
 
@@ -26,4 +29,5 @@ public class ConsultaCuentaAV4ResponseDto {
 		this.av4 = av4;
 	}
 
+	
 }

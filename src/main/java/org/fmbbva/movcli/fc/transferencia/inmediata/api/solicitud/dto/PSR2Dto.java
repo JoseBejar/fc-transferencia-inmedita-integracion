@@ -1,6 +1,6 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto;
 
-public class RCTC2Dto {
+public class PSR2Dto {
 	
 	private String debtorParticipantCode;
 	private String creditorParticipantCode;
@@ -23,11 +23,11 @@ public class RCTC2Dto {
 	private String sameCustomerFlag;
 	private String instructionId;
 	private String interbankSettlementAmount;
-	public RCTC2Dto() {
+	public PSR2Dto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public RCTC2Dto(String debtorParticipantCode, String creditorParticipantCode, String responseDate,
+	public PSR2Dto(String debtorParticipantCode, String creditorParticipantCode, String responseDate,
 			String responseTime, String terminalId, String retrievalReferenteNumber, String trace, String amount,
 			String currency, String transactionReference, String responseCode, String reasonCode, String feeAmount,
 			String settlementDate, String transactionType, String debtorCCI, String creditorCCI,
