@@ -16,21 +16,16 @@ public class ConsultaCuentaSoapAV2Request {
 	   
 	   @JsonProperty("AV2")
 	   private AV2Dto av2Dto;
-	   
-	   @JsonProperty("erroresnegocio")
-	   private BTErroresNegocioDto erroresnegocio;
 
 	public ConsultaCuentaSoapAV2Request() {
 		super();
 	}
 
-	public ConsultaCuentaSoapAV2Request(BTExtReqDto bTExtReqDto, int mpe005idc, AV2Dto av2Dto,
-			BTErroresNegocioDto erroresnegocio) {
+	public ConsultaCuentaSoapAV2Request(BTExtReqDto bTExtReqDto, int mpe005idc, AV2Dto av2Dto) {
 		super();
 		this.bTExtReqDto = bTExtReqDto;
 		this.mpe005idc = mpe005idc;
 		this.av2Dto = av2Dto;
-		this.erroresnegocio = erroresnegocio;
 	}
 
 	public BTExtReqDto getbTExtReqDto() {
@@ -56,21 +51,6 @@ public class ConsultaCuentaSoapAV2Request {
 	public void setAv2Dto(AV2Dto av2Dto) {
 		this.av2Dto = av2Dto;
 	}
-
-	public BTErroresNegocioDto getErroresnegocio() {
-		return erroresnegocio;
-	}
-
-	public void setErroresnegocio(BTErroresNegocioDto erroresnegocio) {
-		this.erroresnegocio = erroresnegocio;
-	}
-
-	@Override
-	public String toString() {
-		return "ConsultaCuentaSoapAV2Request [bTExtReqDto=" + bTExtReqDto + ", mpe005idc=" + mpe005idc + ", av2Dto="
-				+ av2Dto + ", erroresnegocio=" + erroresnegocio + "]";
-	}
-	   
 	   
 
 }

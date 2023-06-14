@@ -6,7 +6,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import bantotal.dlya.com.uy.btservice.BTErroresNegocio;
 import bantotal.dlya.com.uy.btservice.BTExtReq;
 
 
@@ -23,7 +22,6 @@ import bantotal.dlya.com.uy.btservice.BTExtReq;
  *         &lt;element name="Extreq" type="{http://uy.com.dlya.bantotal/BTService/}BTExtReq"/&gt;
  *         &lt;element name="Mpe005idc" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
  *         &lt;element name="Payload" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="Erroresnegocio" type="{http://uy.com.dlya.bantotal/BTService/}BTErroresNegocio"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,8 +34,7 @@ import bantotal.dlya.com.uy.btservice.BTExtReq;
 @XmlType(name = "", propOrder = {
     "extreq",
     "mpe005Idc",
-    "payload",
-    "erroresnegocio"
+    "payload"
 })
 @XmlRootElement(name = "wsBTRecepcionTIN.Execute")
 public class WsBTRecepcionTINExecute {
@@ -48,8 +45,6 @@ public class WsBTRecepcionTINExecute {
     protected short mpe005Idc;
     @XmlElement(name = "Payload", required = true)
     protected String payload;
-    @XmlElement(name = "Erroresnegocio", required = true)
-    protected BTErroresNegocio erroresnegocio;
 
     /**
      * Obtiene el valor de la propiedad extreq.
@@ -113,30 +108,6 @@ public class WsBTRecepcionTINExecute {
      */
     public void setPayload(String value) {
         this.payload = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad erroresnegocio.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BTErroresNegocio }
-     *     
-     */
-    public BTErroresNegocio getErroresnegocio() {
-        return erroresnegocio;
-    }
-
-    /**
-     * Define el valor de la propiedad erroresnegocio.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BTErroresNegocio }
-     *     
-     */
-    public void setErroresnegocio(BTErroresNegocio value) {
-        this.erroresnegocio = value;
     }
 
 }

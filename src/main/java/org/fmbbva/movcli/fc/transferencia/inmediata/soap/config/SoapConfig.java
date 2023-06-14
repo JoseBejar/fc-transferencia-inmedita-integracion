@@ -19,7 +19,7 @@ public class SoapConfig {
 	 @Bean
 	    public ClientSoap getSoapClient(Jaxb2Marshaller marshaller){
 		 	ClientSoap soapClient = new ClientSoap();
-	        soapClient.setDefaultUri("https://172.20.6.15:9443/desarrollo/servlet/com.dlya.bantotal.awsbtrecepciontin");
+	        soapClient.setDefaultUri("https://btdes.cnpdes.local:9443/desarrollo/servlet/com.dlya.bantotal.awsbtrecepciontin");
 	        soapClient.setMarshaller(marshaller);
 	        soapClient.setUnmarshaller(marshaller);
 

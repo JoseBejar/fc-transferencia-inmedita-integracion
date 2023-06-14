@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class BTErroresNegocio {
 
-	@XmlElement(name = "BTErrorNegocio")
+    @XmlElement(name = "BTErrorNegocio")
     protected List<BTErrorNegocio> btErrorNegocio;
 
     /**
@@ -65,8 +65,5 @@ public class BTErroresNegocio {
         }
         return this.btErrorNegocio;
     }
-    public void setBtErrorNegocio(List<BTErrorNegocio> btErrorNegocio) {
-		this.btErrorNegocio = btErrorNegocio;
-	}
 
 }
