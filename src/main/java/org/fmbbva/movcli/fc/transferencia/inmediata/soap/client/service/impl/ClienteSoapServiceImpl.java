@@ -13,6 +13,8 @@ import org.tempuri.action.WsBTRecepcionTINExecute;
 import org.tempuri.action.WsBTRecepcionTINExecuteResponse;
 
 
+
+
 @Service
 public class ClienteSoapServiceImpl implements ClienteSoapService{
 	
@@ -29,8 +31,9 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 		
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute = clienteSoapMapper.getAV2SoapMapper(consultaCuentaSoapAV2Request);
 		WsBTRecepcionTINExecuteResponse response = clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);
-		//mapear de xml a json 
-		ConsultaCuentaAV3ResponseDto responseAv3 = new ConsultaCuentaAV3ResponseDto();
+		
+		//JSONObject json = WSDLUtil.convertResponseWSDLtoString(response, "Errores");
+		ConsultaCuentaAV3ResponseDto responseAv3 = clienteSoapMapper.getAV3SoapMapper(response);
 		
 		return responseAv3;
 	}

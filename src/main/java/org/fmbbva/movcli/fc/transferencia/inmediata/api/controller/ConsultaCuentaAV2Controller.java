@@ -20,8 +20,7 @@ public class ConsultaCuentaAV2Controller {
 	
 	@PostMapping(value = "/soap/AV2")
 	public ResponseEntity<ConsultaCuentaAV3ResponseDto> getWsBTConsultaCuentaAV2(@RequestBody ConsultaCuentaSoapAV2Request request) throws Exception {
-		ConsultaCuentaAV3ResponseDto response = new ConsultaCuentaAV3ResponseDto();
-		consultaCuentaService.getConsultaCuentaSoapAV2(request);
+		ConsultaCuentaAV3ResponseDto response = consultaCuentaService.getConsultaCuentaSoapAV2(request);
 		return new ResponseEntity<>(response, HttpStatus.CREATED);
 		
 	}

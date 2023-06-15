@@ -5,7 +5,7 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV2Req
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV4ResponseDto;
 import org.springframework.stereotype.Service;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV3Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV3;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV4Dto;
 
 @Service
@@ -53,13 +53,12 @@ public class ConsultaCuentaMapper {
 	
 	public ConsultaCuentaAV3ResponseDto getConsultaCuentaAV2Mapper(ConsultaCuentaAV2RequestDto request) {
 		
-		AV3Dto aV3Dto = new AV3Dto();
+		AV3 aV3Dto = new AV3();
 		aV3Dto.setDebtorParticipantCode(request.getAv2Dto().getDebtorParticipantCode());
 		aV3Dto.setCreditorParticipantCode(request.getAv2Dto().getCreditorParticipantCode());
 		aV3Dto.setCreationDate(request.getAv2Dto().getCreationDate());
 		aV3Dto.setCreationTime(request.getAv2Dto().getCreationTime());
 		aV3Dto.setTerminalId(request.getAv2Dto().getTerminalId());
-		aV3Dto.setRetrievalReferenteNumber(request.getAv2Dto().getRetrievalReferenteNumber());
 		aV3Dto.setTrace(request.getAv2Dto().getTrace());
 		aV3Dto.setBranchId(request.getAv2Dto().getBranchId());
 		aV3Dto.setDebtorName(request.getAv2Dto().getDebtorName());
@@ -73,15 +72,11 @@ public class ConsultaCuentaMapper {
 		aV3Dto.setInstructionId(request.getAv2Dto().getInstructionId());
 		aV3Dto.setResponseCode(null);
 		aV3Dto.setReasonCode(null);
-		aV3Dto.setCreditorName(null);
 		aV3Dto.setCreditorAddressLine(request.getAv2Dto().getCreditorAddressLine());
-		aV3Dto.setCreditorId(null);
-		aV3Dto.setCreditorIdCode(null);
 		aV3Dto.setCreditorPhoneNumber(request.getAv2Dto().getCreditorPhoneNumber());
 		aV3Dto.setCreditorMobileNumber(request.getAv2Dto().getCreditorMobileNumber());
 		aV3Dto.setCreditorCCI(request.getAv2Dto().getCreditorCCI());
 		aV3Dto.setCreditorCreditCard(request.getAv2Dto().getCreditorCreditCard());
-		aV3Dto.setSameCustomerFlag(null);
 		aV3Dto.setCurrency(request.getAv2Dto().getCurrency());
 		aV3Dto.setProxyValue(request.getAv2Dto().getProxyValue());
 		aV3Dto.setProxyType(request.getAv2Dto().getProxyType());

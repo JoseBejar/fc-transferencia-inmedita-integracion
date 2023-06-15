@@ -41,13 +41,15 @@ public class ConsultaCuentaServiceImpl implements ConsultaCuentaService{
 
 	@Override
 	public ConsultaCuentaAV3ResponseDto getConsultaCuentaSoapAV2(ConsultaCuentaSoapAV2Request consultaCuentaSoapAV2Request){
-		ConsultaCuentaAV3ResponseDto response = new ConsultaCuentaAV3ResponseDto();
-		try {
-			response = clienteSoapService.getConsultaCuentaSoapAV2(consultaCuentaSoapAV2Request);
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("error " +e.getMessage());
-		}
+		
+
+			ConsultaCuentaAV3ResponseDto response = null;
+			try {
+				response = clienteSoapService.getConsultaCuentaSoapAV2(consultaCuentaSoapAV2Request);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+	
 		return response;
 	}
 	

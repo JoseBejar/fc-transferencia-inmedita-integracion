@@ -1,57 +1,53 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto;
 
-public class AV3Dto {
+public class AV3 {
 	
-	private String debtorParticipantCode;
-	private String creditorParticipantCode;
-	private String creationDate;
-	private String creationTime;
-	private String terminalId;
-	private String retrievalReferenteNumber;
-	private String trace;
-	private String branchId;
-	private String debtorName;
-	private String debtorId;
-	private String debtorIdCode;
-	private String debtorPhoneNumber;
-	private String debtorAddressLine;
-	private String debtorMobileNumber;
-	private String transactionType;
-	private String channel;
-	private String instructionId;
-	private String responseCode;
-	private String reasonCode;
-	private String creditorName;
-	private String creditorAddressLine;
-	private String creditorId;
-	private String creditorIdCode;
-	private String creditorPhoneNumber;
-	private String creditorMobileNumber;
-	private String creditorCCI;
-	private String creditorCreditCard;
-	private String sameCustomerFlag;
-	private String currency;
-	private String proxyValue;
-	private String proxyType;
+	public String debtorParticipantCode;
+    public String creditorParticipantCode;
+    public String creationDate;
+    public String creationTime;
+    public String terminalId;
+    public String retrievalReferenceNumber;
+    public String trace;
+    public String branchId;
+    public String debtorName;
+    public String debtorId;
+    public String debtorIdCode;
+    public String debtorPhoneNumber;
+    public String debtorAddressLine;
+    public String debtorMobileNumber;
+    public String transactionType;
+    public String channel;
+    public String instructionId;
+    public String responseCode;
+    public String reasonCode;
+    public String creditorAddressLine;
+    public String creditorPhoneNumber;
+    public String creditorMobileNumber;
+    public String creditorCCI;
+    public String creditorCreditCard;
+    public String proxyValue;
+    public String proxyType;
+    public String currency;
 	
-	public AV3Dto() {
+	public AV3() {
 		super();
 	}
 
-	public AV3Dto(String debtorParticipantCode, String creditorParticipantCode, String creationDate,
-			String creationTime, String terminalId, String retrievalReferenteNumber, String trace, String branchId,
+	public AV3(String debtorParticipantCode, String creditorParticipantCode, String creationDate,
+			String creationTime, String terminalId, String retrievalReferenceNumber, String trace, String branchId,
 			String debtorName, String debtorId, String debtorIdCode, String debtorPhoneNumber, String debtorAddressLine,
 			String debtorMobileNumber, String transactionType, String channel, String instructionId,
-			String responseCode, String reasonCode, String creditorName, String creditorAddressLine, String creditorId,
-			String creditorIdCode, String creditorPhoneNumber, String creditorMobileNumber, String creditorCCI,
-			String creditorCreditCard, String sameCustomerFlag, String currency, String proxyValue, String proxyType) {
+			String responseCode, String reasonCode, String creditorAddressLine, String creditorPhoneNumber,
+			String creditorMobileNumber, String creditorCCI, String creditorCreditCard, String proxyValue,
+			String proxyType, String currency) {
 		super();
 		this.debtorParticipantCode = debtorParticipantCode;
 		this.creditorParticipantCode = creditorParticipantCode;
 		this.creationDate = creationDate;
 		this.creationTime = creationTime;
 		this.terminalId = terminalId;
-		this.retrievalReferenteNumber = retrievalReferenteNumber;
+		this.retrievalReferenceNumber = retrievalReferenceNumber;
 		this.trace = trace;
 		this.branchId = branchId;
 		this.debtorName = debtorName;
@@ -65,20 +61,17 @@ public class AV3Dto {
 		this.instructionId = instructionId;
 		this.responseCode = responseCode;
 		this.reasonCode = reasonCode;
-		this.creditorName = creditorName;
 		this.creditorAddressLine = creditorAddressLine;
-		this.creditorId = creditorId;
-		this.creditorIdCode = creditorIdCode;
 		this.creditorPhoneNumber = creditorPhoneNumber;
 		this.creditorMobileNumber = creditorMobileNumber;
 		this.creditorCCI = creditorCCI;
 		this.creditorCreditCard = creditorCreditCard;
-		this.sameCustomerFlag = sameCustomerFlag;
-		this.currency = currency;
 		this.proxyValue = proxyValue;
 		this.proxyType = proxyType;
+		this.currency = currency;
 	}
 
+	
 	public String getDebtorParticipantCode() {
 		return debtorParticipantCode;
 	}
@@ -119,12 +112,12 @@ public class AV3Dto {
 		this.terminalId = terminalId;
 	}
 
-	public String getRetrievalReferenteNumber() {
-		return retrievalReferenteNumber;
+	public String getRetrievalReferenceNumber() {
+		return retrievalReferenceNumber;
 	}
 
-	public void setRetrievalReferenteNumber(String retrievalReferenteNumber) {
-		this.retrievalReferenteNumber = retrievalReferenteNumber;
+	public void setRetrievalReferenceNumber(String retrievalReferenceNumber) {
+		this.retrievalReferenceNumber = retrievalReferenceNumber;
 	}
 
 	public String getTrace() {
@@ -231,36 +224,12 @@ public class AV3Dto {
 		this.reasonCode = reasonCode;
 	}
 
-	public String getCreditorName() {
-		return creditorName;
-	}
-
-	public void setCreditorName(String creditorName) {
-		this.creditorName = creditorName;
-	}
-
 	public String getCreditorAddressLine() {
 		return creditorAddressLine;
 	}
 
 	public void setCreditorAddressLine(String creditorAddressLine) {
 		this.creditorAddressLine = creditorAddressLine;
-	}
-
-	public String getCreditorId() {
-		return creditorId;
-	}
-
-	public void setCreditorId(String creditorId) {
-		this.creditorId = creditorId;
-	}
-
-	public String getCreditorIdCode() {
-		return creditorIdCode;
-	}
-
-	public void setCreditorIdCode(String creditorIdCode) {
-		this.creditorIdCode = creditorIdCode;
 	}
 
 	public String getCreditorPhoneNumber() {
@@ -295,22 +264,6 @@ public class AV3Dto {
 		this.creditorCreditCard = creditorCreditCard;
 	}
 
-	public String getSameCustomerFlag() {
-		return sameCustomerFlag;
-	}
-
-	public void setSameCustomerFlag(String sameCustomerFlag) {
-		this.sameCustomerFlag = sameCustomerFlag;
-	}
-
-	public String getCurrency() {
-		return currency;
-	}
-
-	public void setCurrency(String currency) {
-		this.currency = currency;
-	}
-
 	public String getProxyValue() {
 		return proxyValue;
 	}
@@ -326,7 +279,13 @@ public class AV3Dto {
 	public void setProxyType(String proxyType) {
 		this.proxyType = proxyType;
 	}
-	
-	
+
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
 
 }
