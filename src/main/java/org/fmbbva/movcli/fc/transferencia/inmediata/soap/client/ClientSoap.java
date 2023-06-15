@@ -3,6 +3,10 @@ package org.fmbbva.movcli.fc.transferencia.inmediata.soap.client;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
+import org.tempuri.action.WsBTHabilitarTIN;
+import org.tempuri.action.WsBTHabilitarTINExecute;
+import org.tempuri.action.WsBTHabilitarTINExecuteResponse;
+import org.tempuri.action.WsBTHabilitarTINSoapPort;
 import org.tempuri.action.WsBTRecepcionTIN;
 import org.tempuri.action.WsBTRecepcionTINExecute;
 import org.tempuri.action.WsBTRecepcionTINExecuteResponse;
@@ -29,5 +33,7 @@ public class ClientSoap extends WebServiceGatewaySupport {
 		}
 		return response;
 	}
+	
+	
 
 }

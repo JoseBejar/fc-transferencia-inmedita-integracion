@@ -73,7 +73,7 @@ public class TransferenciaInmediataController {
 	@PostMapping(value = "/AV1")
 	public ResponseEntity<ConsultaCuentaAV4ResponseDto> getWsBTConsultaCuentaAV1(@RequestBody ConsultaCuentaAV1RequestDto request) {
 
-		//logger.debug("Recibiendo Consulta Cuenta AV1");
+		
 		logger.info("Recibiendo Consulta del servicio Av1");
 		
 		ConsultaCuentaAV4ResponseDto response =  new ConsultaCuentaAV4ResponseDto();

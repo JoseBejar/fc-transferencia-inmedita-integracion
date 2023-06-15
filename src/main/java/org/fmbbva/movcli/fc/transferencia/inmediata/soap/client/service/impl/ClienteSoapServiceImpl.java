@@ -38,6 +38,9 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 		return responseAv3;
 	}
 	
+
+	
+	
 	
 
 }
