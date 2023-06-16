@@ -16,7 +16,7 @@ public class EchoTestSoap extends WebServiceGatewaySupport {
 		
 		
 		WsBTHabilitarTINExecuteResponse response = new WsBTHabilitarTINExecuteResponse();
-					
+				log.info("Obteniendo servicio HabilitarTIN Soap");	
 			WsBTHabilitarTIN service = new WsBTHabilitarTIN();
 			WsBTHabilitarTINSoapPort port = service.getWsBTHabilitarTINSoapPort();
 			

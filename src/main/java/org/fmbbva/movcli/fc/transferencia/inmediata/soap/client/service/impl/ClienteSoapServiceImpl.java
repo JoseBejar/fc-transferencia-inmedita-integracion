@@ -2,6 +2,8 @@ package org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.service.impl;
 
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.ClientSoap;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.mapper.ClienteSoapMapper;
@@ -18,6 +20,8 @@ import org.tempuri.action.WsBTRecepcionTINExecuteResponse;
 @Service
 public class ClienteSoapServiceImpl implements ClienteSoapService{
 	
+	private static final Logger log = LogManager.getLogger(ClienteSoapMapper.class); 	
+
 	@Autowired
 	private ClienteSoapMapper clienteSoapMapper;
 	
@@ -27,7 +31,7 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 
 	@Override
 	public ConsultaCuentaAV3ResponseDto getConsultaCuentaSoapAV2(ConsultaCuentaSoapAV2Request consultaCuentaSoapAV2Request) throws Exception {
-		
+		log.info("Cliente Soap Implements");
 		
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute = clienteSoapMapper.getAV2SoapMapper(consultaCuentaSoapAV2Request);
 		WsBTRecepcionTINExecuteResponse response = clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);

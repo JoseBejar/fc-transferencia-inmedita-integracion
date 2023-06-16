@@ -1,8 +1,11 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.mapper;
 
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.tomcat.util.json.JSONParser;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV3;
+import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.ClientSoap;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.ConsultaCuentaSoapAV2Request;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -20,8 +23,10 @@ import bantotal.dlya.com.uy.btservice.BTExtReq;
 @Service
 public class ClienteSoapMapper {
 	
+	private static final Logger log = LogManager.getLogger(ClienteSoapMapper.class); 	
+
 	public WsBTRecepcionTINExecute getAV2SoapMapper(ConsultaCuentaSoapAV2Request request) {
-		
+		log.info("Setteando atributos");
 		WsBTRecepcionTINExecute wsBTRecepcionTIN = new WsBTRecepcionTINExecute();
 		BTExtReq bTExtReq = new BTExtReq();
 		bTExtReq.setCanal(request.getbTExtReqDto().getCanal());

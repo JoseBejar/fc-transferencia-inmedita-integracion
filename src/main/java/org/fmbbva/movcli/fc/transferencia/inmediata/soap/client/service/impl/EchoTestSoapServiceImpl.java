@@ -1,6 +1,9 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.service.impl;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestResponseET2Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.ClientSoap;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.EchoTestSoap;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.mapper.EchoTestSoapMapper;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.service.EchoTestSoapService;
@@ -13,13 +16,17 @@ import org.tempuri.action.WsBTRecepcionTINExecuteResponse;
 
 public class EchoTestSoapServiceImpl implements EchoTestSoapService {
 
+	private static final Logger log = LogManager.getLogger(EchoTestSoapServiceImpl.class);
+
 	@Autowired
 	private EchoTestSoap echoTestSoap;
 	
 	@Autowired
 	private EchoTestSoapMapper echoTestSoapMapper;
 	@Override
+	
 	public EchoTestResponseET2Dto getEchotestSoapET1(EchoTestSoapET1Request echoTestSoapET1Request) {
+		log.info("EchoTesti Implements");
 		WsBTHabilitarTINExecute wsBTHabilitarTINExecute = echoTestSoapMapper.getET1SoapMapper(echoTestSoapET1Request);
 		WsBTHabilitarTINExecuteResponse response = echoTestSoap.getWsBTHabilitarTIN(wsBTHabilitarTINExecute);
 		

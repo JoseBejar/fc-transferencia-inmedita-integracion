@@ -1,5 +1,7 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.mapper;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestResponseET2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.ConsultaCuentaSoapAV2Request;
@@ -16,9 +18,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import bantotal.dlya.com.uy.btservice.BTExtReq;
 
 public class EchoTestSoapMapper {
-	
+	private static final Logger log = LogManager.getLogger(EchoTestSoapMapper.class); 	
+
 	public WsBTHabilitarTINExecute getET1SoapMapper(EchoTestSoapET1Request request) {
-			
+			log.info("Setteando atributos");
 		WsBTHabilitarTINExecute wsBTHabilitarTINExecute = new WsBTHabilitarTINExecute();
 			BTExtReq btExtReq = new BTExtReq();
 			btExtReq.setCanal(request.getbTExtReqDto().getCanal());
