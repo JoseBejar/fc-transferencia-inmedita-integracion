@@ -6,6 +6,7 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3Res
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestResponseET2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.ConsultaCuentaSoapAV2Request;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.EchoTestSoapET1Request;
+import org.springframework.stereotype.Service;
 import org.tempuri.action.WsBTHabilitarTINExecute;
 import org.tempuri.action.WsBTHabilitarTINExecuteResponse;
 import org.tempuri.action.WsBTRecepcionTINExecute;
@@ -17,12 +18,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import bantotal.dlya.com.uy.btservice.BTExtReq;
 
+@Service
 public class EchoTestSoapMapper {
 	private static final Logger log = LogManager.getLogger(EchoTestSoapMapper.class); 	
 
 	public WsBTHabilitarTINExecute getET1SoapMapper(EchoTestSoapET1Request request) {
 			log.info("Setteando atributos");
-		WsBTHabilitarTINExecute wsBTHabilitarTINExecute = new WsBTHabilitarTINExecute();
+			WsBTHabilitarTINExecute wsBTHabilitarTINExecute = new WsBTHabilitarTINExecute();
 			BTExtReq btExtReq = new BTExtReq();
 			btExtReq.setCanal(request.getbTExtReqDto().getCanal());
 			btExtReq.setCanal(request.getbTExtReqDto().getCanal());
@@ -37,16 +39,6 @@ public class EchoTestSoapMapper {
 	}
 	public EchoTestResponseET2Dto getET2SoapMapper(WsBTHabilitarTINExecuteResponse request) {
 		EchoTestResponseET2Dto response = new EchoTestResponseET2Dto();
-//		try {
-//			response =  new ObjectMapper().readValue(request.getPayload(), ConsultaCuentaAV3ResponseDto.class);
-//			
-//		} catch (JsonMappingException e) {
-//			e.printStackTrace();
-//		} catch (JsonProcessingException e) {
-//
-//			e.printStackTrace();
-//		}
-		
 		return response;
 	}
 

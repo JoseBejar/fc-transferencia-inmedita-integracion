@@ -19,8 +19,6 @@ public class EchoTestServiceImpl implements EchoTestService {
 
 	@Autowired
 	private EchoTestMapper echoTestMapper;
-	@Autowired
-	private EchoTestService echoTestService;
 	
 	@Autowired
 	private EchoTestSoapService  echoTestSoapService;
@@ -42,9 +40,9 @@ public class EchoTestServiceImpl implements EchoTestService {
 			logger.info("Echo Test ET2 Soap Service impl");
 			response=  echoTestSoapService.getEchotestSoapET1(echoTestSoapET1Request);
 		} catch (Exception e) {
-			// TODO: handle exception
+
 		}
-		return null;
+		return response;
 	}
 	
 	
