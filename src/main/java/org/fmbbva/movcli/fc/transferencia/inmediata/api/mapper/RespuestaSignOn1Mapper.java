@@ -1,5 +1,7 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper;
 
+
+import org.apache.log4j.Logger;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.signon.dto.RespuestaSignOn1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.signon.dto.RespuestaSignOn2ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.signon.dto.SignON2Dto;
@@ -9,8 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class RespuestaSignOn1Mapper {
 	
+	private static final Logger  logger= Logger.getLogger(RespuestaSignOn1Mapper.class);
+
 	public RespuestaSignOn2ResponseDto getRespuestaSignOn1(RespuestaSignOn1RequestDto request){
-		
+		logger.info("Respuesta SignOn2 Mapper");
 		 
 		RespuestaSignOn2ResponseDto respuestaSignOn2ResponseDto = new RespuestaSignOn2ResponseDto();
 		

@@ -10,7 +10,8 @@ public class CT2Dto {
 	private String retrievalReferenteNumber;
 	private String trace;
 	private String channel;
-	private String amountprivate;
+	private String amount;
+	private String currency;
 	private String transactionReference;
 	private String referenceTransactionId;
 	private String transactionType;
@@ -43,13 +44,18 @@ public class CT2Dto {
 	private String instructionId;
 	private String interbankSettlementAmount;
 	
+	
+	
 	public CT2Dto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public CT2Dto(String debtorParticipantCode, String creditorParticipantCode,
-			String creationDate, String creationTime, String terminalId, String retrievalReferenteNumber, String trace,
-			String channel, String amountprivate, String transactionReference, String referenceTransactionId,
+
+
+
+	public CT2Dto(String debtorParticipantCode, String creditorParticipantCode, String creationDate,
+			String creationTime, String terminalId, String retrievalReferenteNumber, String trace, String channel,
+			String amount, String currency, String transactionReference, String referenceTransactionId,
 			String transactionType, String feeAmount, String feeCode, String applicationCriteria,
 			String debtorTypeOfPerson, String debtorName, String debtorAddressLine, String debtorIdCode,
 			String debtorId, String debtorPhoneNumber, String debtorMobileNumber, String debtorCCI, String creditorName,
@@ -66,7 +72,8 @@ public class CT2Dto {
 		this.retrievalReferenteNumber = retrievalReferenteNumber;
 		this.trace = trace;
 		this.channel = channel;
-		this.amountprivate = amountprivate;
+		this.amount = amount;
+		this.currency = currency;
 		this.transactionReference = transactionReference;
 		this.referenceTransactionId = referenceTransactionId;
 		this.transactionType = transactionType;
@@ -99,246 +106,578 @@ public class CT2Dto {
 		this.instructionId = instructionId;
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
+
+
+
 	public String getDebtorParticipantCode() {
 		return debtorParticipantCode;
 	}
+
+
+
 	public void setDebtorParticipantCode(String debtorParticipantCode) {
 		this.debtorParticipantCode = debtorParticipantCode;
 	}
+
+
+
 	public String getCreditorParticipantCode() {
 		return creditorParticipantCode;
 	}
+
+
+
 	public void setCreditorParticipantCode(String creditorParticipantCode) {
 		this.creditorParticipantCode = creditorParticipantCode;
 	}
+
+
+
 	public String getCreationDate() {
 		return creationDate;
 	}
+
+
+
 	public void setCreationDate(String creationDate) {
 		this.creationDate = creationDate;
 	}
+
+
+
 	public String getCreationTime() {
 		return creationTime;
 	}
+
+
+
 	public void setCreationTime(String creationTime) {
 		this.creationTime = creationTime;
 	}
+
+
+
 	public String getTerminalId() {
 		return terminalId;
 	}
+
+
+
 	public void setTerminalId(String terminalId) {
 		this.terminalId = terminalId;
 	}
+
+
+
 	public String getRetrievalReferenteNumber() {
 		return retrievalReferenteNumber;
 	}
+
+
+
 	public void setRetrievalReferenteNumber(String retrievalReferenteNumber) {
 		this.retrievalReferenteNumber = retrievalReferenteNumber;
 	}
+
+
+
 	public String getTrace() {
 		return trace;
 	}
+
+
+
 	public void setTrace(String trace) {
 		this.trace = trace;
 	}
+
+
+
 	public String getChannel() {
 		return channel;
 	}
+
+
+
 	public void setChannel(String channel) {
 		this.channel = channel;
 	}
-	public String getAmountprivate() {
-		return amountprivate;
+
+
+
+	public String getAmount() {
+		return amount;
 	}
-	public void setAmountprivate(String amountprivate) {
-		this.amountprivate = amountprivate;
+
+
+
+	public void setAmount(String amount) {
+		this.amount = amount;
 	}
+
+
+
+	public String getCurrency() {
+		return currency;
+	}
+
+
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+
+
+
 	public String getTransactionReference() {
 		return transactionReference;
 	}
+
+
+
 	public void setTransactionReference(String transactionReference) {
 		this.transactionReference = transactionReference;
 	}
+
+
+
 	public String getReferenceTransactionId() {
 		return referenceTransactionId;
 	}
+
+
+
 	public void setReferenceTransactionId(String referenceTransactionId) {
 		this.referenceTransactionId = referenceTransactionId;
 	}
+
+
+
 	public String getTransactionType() {
 		return transactionType;
 	}
+
+
+
 	public void setTransactionType(String transactionType) {
 		this.transactionType = transactionType;
 	}
+
+
+
 	public String getFeeAmount() {
 		return feeAmount;
 	}
+
+
+
 	public void setFeeAmount(String feeAmount) {
 		this.feeAmount = feeAmount;
 	}
+
+
+
 	public String getFeeCode() {
 		return feeCode;
 	}
+
+
+
 	public void setFeeCode(String feeCode) {
 		this.feeCode = feeCode;
 	}
+
+
+
 	public String getApplicationCriteria() {
 		return applicationCriteria;
 	}
+
+
+
 	public void setApplicationCriteria(String applicationCriteria) {
 		this.applicationCriteria = applicationCriteria;
 	}
+
+
+
 	public String getDebtorTypeOfPerson() {
 		return debtorTypeOfPerson;
 	}
+
+
+
 	public void setDebtorTypeOfPerson(String debtorTypeOfPerson) {
 		this.debtorTypeOfPerson = debtorTypeOfPerson;
 	}
+
+
+
 	public String getDebtorName() {
 		return debtorName;
 	}
+
+
+
 	public void setDebtorName(String debtorName) {
 		this.debtorName = debtorName;
 	}
+
+
+
 	public String getDebtorAddressLine() {
 		return debtorAddressLine;
 	}
+
+
+
 	public void setDebtorAddressLine(String debtorAddressLine) {
 		this.debtorAddressLine = debtorAddressLine;
 	}
+
+
+
 	public String getDebtorIdCode() {
 		return debtorIdCode;
 	}
+
+
+
 	public void setDebtorIdCode(String debtorIdCode) {
 		this.debtorIdCode = debtorIdCode;
 	}
+
+
+
 	public String getDebtorId() {
 		return debtorId;
 	}
+
+
+
 	public void setDebtorId(String debtorId) {
 		this.debtorId = debtorId;
 	}
+
+
+
 	public String getDebtorPhoneNumber() {
 		return debtorPhoneNumber;
 	}
+
+
+
 	public void setDebtorPhoneNumber(String debtorPhoneNumber) {
 		this.debtorPhoneNumber = debtorPhoneNumber;
 	}
+
+
+
 	public String getDebtorMobileNumber() {
 		return debtorMobileNumber;
 	}
+
+
+
 	public void setDebtorMobileNumber(String debtorMobileNumber) {
 		this.debtorMobileNumber = debtorMobileNumber;
 	}
+
+
+
 	public String getDebtorCCI() {
 		return debtorCCI;
 	}
+
+
+
 	public void setDebtorCCI(String debtorCCI) {
 		this.debtorCCI = debtorCCI;
 	}
+
+
+
 	public String getCreditorName() {
 		return creditorName;
 	}
+
+
+
 	public void setCreditorName(String creditorName) {
 		this.creditorName = creditorName;
 	}
+
+
+
 	public String getCreditorAddressLine() {
 		return creditorAddressLine;
 	}
+
+
+
 	public void setCreditorAddressLine(String creditorAddressLine) {
 		this.creditorAddressLine = creditorAddressLine;
 	}
+
+
+
 	public String getCreditorPhoneNumber() {
 		return creditorPhoneNumber;
 	}
+
+
+
 	public void setCreditorPhoneNumber(String creditorPhoneNumber) {
 		this.creditorPhoneNumber = creditorPhoneNumber;
 	}
+
+
+
 	public String getCreditorMobileNumber() {
 		return creditorMobileNumber;
 	}
+
+
+
 	public void setCreditorMobileNumber(String creditorMobileNumber) {
 		this.creditorMobileNumber = creditorMobileNumber;
 	}
+
+
+
 	public String getCreditorCCI() {
 		return creditorCCI;
 	}
+
+
+
 	public void setCreditorCCI(String creditorCCI) {
 		this.creditorCCI = creditorCCI;
 	}
+
+
+
 	public String getCreditorCreditCard() {
 		return creditorCreditCard;
 	}
+
+
+
 	public void setCreditorCreditCard(String creditorCreditCard) {
 		this.creditorCreditCard = creditorCreditCard;
 	}
+
+
+
 	public String getSameCustomerFlag() {
 		return sameCustomerFlag;
 	}
+
+
+
 	public void setSameCustomerFlag(String sameCustomerFlag) {
 		this.sameCustomerFlag = sameCustomerFlag;
 	}
+
+
+
 	public String getPurposeCode() {
 		return purposeCode;
 	}
+
+
+
 	public void setPurposeCode(String purposeCode) {
 		this.purposeCode = purposeCode;
 	}
+
+
+
 	public String getUnstructuredInformation() {
 		return unstructuredInformation;
 	}
+
+
+
 	public void setUnstructuredInformation(String unstructuredInformation) {
 		this.unstructuredInformation = unstructuredInformation;
 	}
+
+
+
 	public String getGrossSalaryAmount() {
 		return grossSalaryAmount;
 	}
+
+
+
 	public void setGrossSalaryAmount(String grossSalaryAmount) {
 		this.grossSalaryAmount = grossSalaryAmount;
 	}
+
+
+
 	public String getSalaryPaymentIndicator() {
 		return salaryPaymentIndicator;
 	}
+
+
+
 	public void setSalaryPaymentIndicator(String salaryPaymentIndicator) {
 		this.salaryPaymentIndicator = salaryPaymentIndicator;
 	}
+
+
+
 	public String getMonthOfThePayment() {
 		return monthOfThePayment;
 	}
+
+
+
 	public void setMonthOfThePayment(String monthOfThePayment) {
 		this.monthOfThePayment = monthOfThePayment;
 	}
+
+
+
 	public String getYearOfThePayment() {
 		return yearOfThePayment;
 	}
+
+
+
 	public void setYearOfThePayment(String yearOfThePayment) {
 		this.yearOfThePayment = yearOfThePayment;
 	}
+
+
+
 	public String getBranchId() {
 		return branchId;
 	}
+
+
+
 	public void setBranchId(String branchId) {
 		this.branchId = branchId;
 	}
+
+
+
 	public String getSettlementDate() {
 		return settlementDate;
 	}
+
+
+
 	public void setSettlementDate(String settlementDate) {
 		this.settlementDate = settlementDate;
 	}
+
+
+
 	public String getInstructionId() {
 		return instructionId;
 	}
+
+
+
 	public void setInstructionId(String instructionId) {
 		this.instructionId = instructionId;
 	}
+
+
+
 	public String getInterbankSettlementAmount() {
 		return interbankSettlementAmount;
 	}
+
+
+
 	public void setInterbankSettlementAmount(String interbankSettlementAmount) {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "CT2Dto [debtorParticipantCode=" + debtorParticipantCode + ", creditorParticipantCode="
+				+ creditorParticipantCode + ", creationDate=" + creationDate + ", creationTime=" + creationTime
+				+ ", terminalId=" + terminalId + ", retrievalReferenteNumber=" + retrievalReferenteNumber + ", trace="
+				+ trace + ", channel=" + channel + ", amount=" + amount + ", currency=" + currency
+				+ ", transactionReference=" + transactionReference + ", referenceTransactionId="
+				+ referenceTransactionId + ", transactionType=" + transactionType + ", feeAmount=" + feeAmount
+				+ ", feeCode=" + feeCode + ", applicationCriteria=" + applicationCriteria + ", debtorTypeOfPerson="
+				+ debtorTypeOfPerson + ", debtorName=" + debtorName + ", debtorAddressLine=" + debtorAddressLine
+				+ ", debtorIdCode=" + debtorIdCode + ", debtorId=" + debtorId + ", debtorPhoneNumber="
+				+ debtorPhoneNumber + ", debtorMobileNumber=" + debtorMobileNumber + ", debtorCCI=" + debtorCCI
+				+ ", creditorName=" + creditorName + ", creditorAddressLine=" + creditorAddressLine
+				+ ", creditorPhoneNumber=" + creditorPhoneNumber + ", creditorMobileNumber=" + creditorMobileNumber
+				+ ", creditorCCI=" + creditorCCI + ", creditorCreditCard=" + creditorCreditCard + ", sameCustomerFlag="
+				+ sameCustomerFlag + ", purposeCode=" + purposeCode + ", unstructuredInformation="
+				+ unstructuredInformation + ", grossSalaryAmount=" + grossSalaryAmount + ", salaryPaymentIndicator="
+				+ salaryPaymentIndicator + ", monthOfThePayment=" + monthOfThePayment + ", yearOfThePayment="
+				+ yearOfThePayment + ", branchId=" + branchId + ", settlementDate=" + settlementDate
+				+ ", instructionId=" + instructionId + ", interbankSettlementAmount=" + interbankSettlementAmount + "]";
+	}
+
+
+
+	public String buildJSON() {
+	
+		StringBuilder sb = new StringBuilder();
+		sb.append("{\"CT2\":{");
+		sb.append("\"debtorParticipantCode\" : \""+getDebtorParticipantCode()+"\",");
+		sb.append("\"creditorParticipantCode\" : \""+getCreditorParticipantCode()+"\",");
+		sb.append("\"creationDate\" : \""+getCreationDate()+"\",");
+		sb.append("\"creationTime\" : \""+getCreationTime()+"\",");
+		sb.append("\"terminalId\" : \""+getTerminalId()+"\",");
+		sb.append("\"retrievalReferenteNumbee\" : \""+getRetrievalReferenteNumber()+"\",");
+		sb.append("\"trace\" : \""+getTrace()+"\",");
+		sb.append("\"channel\" : \""+getChannel()+"\",");
+		sb.append("\"amount\" : \""+getAmount()+"\",");
+		sb.append("\"currency\" : \""+getCurrency()+"\",");
+		sb.append("\"transactionReference\" : \""+getTransactionReference()+"\",");
+		sb.append("\"referenceTransactionId\" : \""+getReferenceTransactionId()+"\",");
+		sb.append("\"transactionType\" : \""+getTransactionType()+"\",");
+		sb.append("\"feeAmount\" : \""+getFeeAmount()+"\",");
+		sb.append("\"feeCode\" : \""+getFeeCode()+"\",");
+		sb.append("\"applicationCriteria\" : \""+getApplicationCriteria()+"\",");
+		sb.append("\"debtorTypeOfPerson\" : \""+getDebtorTypeOfPerson()+"\",");
+		sb.append("\"debtorName\" : \""+getDebtorName()+"\",");
+		sb.append("\"debtorAddressLine\" : \""+getDebtorAddressLine()+"\",");
+		sb.append("\"debtorIdCode\" : \""+getDebtorIdCode()+"\",");
+		sb.append("\"debtorId\" : \""+getDebtorId()+"\",");
+		sb.append("\"debtorPhoneNumber\" : \""+getDebtorPhoneNumber()+"\",");
+		sb.append("\"debtorMobileNumber\" : \""+getDebtorMobileNumber()+"\",");
+		sb.append("\"debtorCCI\" : \""+getDebtorCCI()+"\",");
+		sb.append("\"creditorName\" : \""+getCreditorName()+"\",");
+		sb.append("\"creditorAddressLine\" : \""+getCreditorAddressLine()+"\",");
+		sb.append("\"creditorPhoneNumber\" : \""+getCreditorPhoneNumber()+"\",");
+		sb.append("\"creditorMobileNumber\" : \""+getCreditorMobileNumber()+"\",");
+		sb.append("\"creditorCCI\" : \""+getCreditorCCI()+"\",");
+		sb.append("\"creditorCreditCard\" : \""+getCreditorCreditCard()+"\",");
+		sb.append("\"sameCustomerFlag\" : \""+getSameCustomerFlag()+"\",");
+		sb.append("\"purposeCode\" : \""+getPurposeCode()+"\",");
+		sb.append("\"unstructuredInformation\" : \""+getUnstructuredInformation()+"\",");
+		sb.append("\"grossSalaryAmoun\" : \""+getGrossSalaryAmount()+"\",");
+		sb.append("\"salaryPaymentIndicator\" : \""+getSalaryPaymentIndicator()+"\",");
+		sb.append("\"monthOfThePayment\" : \""+getMonthOfThePayment()+"\",");
+		sb.append("\"yearOfThePayment\" : \""+getYearOfThePayment()+"\",");
+		sb.append("\"branchId\" : \""+getBranchId()+"\",");
+		sb.append("\"settlementDate\" : \""+getSettlementDate()+"\",");
+		sb.append("\"instructionId\" : \""+getInstructionId()+"\",");
+		sb.append("\"interbankSettlementAmount\" : \""+getInterbankSettlementAmount()+"\"");
+		sb.append("}");
+		sb.append("}");
+		return sb.toString();
+	}
+	
+	
+	
+	
 	
 	
 

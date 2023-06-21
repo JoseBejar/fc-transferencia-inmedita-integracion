@@ -8,13 +8,18 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT4Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT5Dto;
+import org.apache.log4j.Logger;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.CT3Dto;
 import org.springframework.stereotype.Service;
 
 @Service
 public class OrdenTransferenciaMapper {
 
+	private static final Logger  logger= Logger.getLogger(OrdenTransferenciaMapper.class);
+
 	public OrdenTransferenciaCT4ResponseDto getOrdenTransferenciaCT1Mapper(OrdenTransferenciaCT1RequestDto request) {
+		
+		logger.info("Orden Transferencia CT4 Mapper");
 		OrdenTransferenciaCT4ResponseDto ordenTransferenciaCT4ResponseDto = new OrdenTransferenciaCT4ResponseDto();
 		CT4Dto ct4Dto = new CT4Dto();
 		ct4Dto.setDebtorParticipantCode(request.getCt1Dto().getDebtorParticipantCode());
@@ -46,6 +51,7 @@ public class OrdenTransferenciaMapper {
 	}
 	
 	public OrdenTransferenciaCT3ResponseDto getOrdenTransferenciaCT2Mapper(OrdenTransferenciaCT2RequestDto request) {
+		logger.info("Orden Transferencia CT3 Mapper");
 		OrdenTransferenciaCT3ResponseDto ordenTransferenciaCT3ResponseDto = new OrdenTransferenciaCT3ResponseDto();
 		CT3Dto ct3Dto = new CT3Dto();
 		ct3Dto.setDebtorParticipantCode(request.getCt2Dto().getDebtorParticipantCode());
@@ -74,7 +80,7 @@ public class OrdenTransferenciaMapper {
 	}
 	
 	public OrdenTransferenciaCT5ResponseDto getOrdenTransferenciaCT5Mapper(OrdenTransferenciaCT5RequestDto request) {
-		
+		logger.info("Orden Transferencia CT5 Mapper");
 		OrdenTransferenciaCT5ResponseDto ordenTransferenciaCT5ResponseDto = new OrdenTransferenciaCT5ResponseDto();
 		CT5Dto ct5Dto = new CT5Dto();
 		ct5Dto.setDebtorParticipantCode(request.getCt5dto().getDebtorParticipantCode());

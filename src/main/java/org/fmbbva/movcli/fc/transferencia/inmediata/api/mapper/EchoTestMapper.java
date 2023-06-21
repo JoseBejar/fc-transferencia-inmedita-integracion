@@ -1,6 +1,9 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper;
 
 
+
+import org.apache.log4j.Logger;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.controller.EchoTestController;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.ET2;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestRequestET1Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestResponseET2Dto;
@@ -9,8 +12,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class EchoTestMapper {
 	
+	private static final Logger  logger= Logger.getLogger(EchoTestMapper.class);
+
+
 	public EchoTestResponseET2Dto getEchoTest1(EchoTestRequestET1Dto request) {
-		
+		logger.info("Echo Test ET1 Mapper ");
 		EchoTestResponseET2Dto echoTestResponseET2Dto = new EchoTestResponseET2Dto();
 		ET2 et2 = new ET2();
 		et2.setParticipantCode(request.getEt1().getParticipantCode());

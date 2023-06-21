@@ -5,16 +5,18 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV2Req
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV4ResponseDto;
 import org.springframework.stereotype.Service;
+import org.apache.log4j.Logger;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV3;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto.AV4Dto;
 
 @Service
 public class ConsultaCuentaMapper {
 	
-	
+	private static final Logger  logger= Logger.getLogger(ConsultaCuentaMapper.class);
+
 	
 	public ConsultaCuentaAV4ResponseDto getConsultaCuentaAV1Mapper(ConsultaCuentaAV1RequestDto request) {
-		
+		logger.info("Consulta Cuenta AV1 Mapper");
 		ConsultaCuentaAV4ResponseDto consultaCuentaAV4ResponseDto = new ConsultaCuentaAV4ResponseDto();
 		AV4Dto response = new AV4Dto();
 		response.setDebtorParticipantCode(request.getAv1().getDebtorParticipantCode());
@@ -53,6 +55,7 @@ public class ConsultaCuentaMapper {
 	
 	public ConsultaCuentaAV3ResponseDto getConsultaCuentaAV2Mapper(ConsultaCuentaAV2RequestDto request) {
 		
+		logger.info("Consulta Cuenta AV2 Mapper");
 		AV3 aV3Dto = new AV3();
 		aV3Dto.setDebtorParticipantCode(request.getAv2Dto().getDebtorParticipantCode());
 		aV3Dto.setCreditorParticipantCode(request.getAv2Dto().getCreditorParticipantCode());

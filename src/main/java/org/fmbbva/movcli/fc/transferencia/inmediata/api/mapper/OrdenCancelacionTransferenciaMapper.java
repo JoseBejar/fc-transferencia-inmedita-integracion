@@ -1,5 +1,6 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper;
 
+import org.apache.log4j.Logger;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CTC2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CancelacionOrdenTransfCTC1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.cancelacion.dto.CancelacionOrdenTransfCTC2ResponseDto;
@@ -8,8 +9,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrdenCancelacionTransferenciaMapper {
 	
+	private static final Logger  logger= Logger.getLogger(OrdenCancelacionTransferenciaMapper.class);
+
 	public CancelacionOrdenTransfCTC2ResponseDto getCancelacionOrdenCTC1(CancelacionOrdenTransfCTC1RequestDto request)
 	{
+		logger.info("Orden Cancelaccion CTC2 Mapper");
 		CancelacionOrdenTransfCTC2ResponseDto cancelacionOrdenTransfCTC2ResponseDto = new CancelacionOrdenTransfCTC2ResponseDto();
 		CTC2Dto ctc2Dto = new CTC2Dto();
 		ctc2Dto.setCreditorParticipantCode(request.getCtc1Dto().getCreditorParticipantCode());

@@ -1,5 +1,7 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper;
 
+
+import org.apache.log4j.Logger;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.PSR2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.SolicitudEstadoPagoPSR1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.solicitud.dto.SolicitudEstadoPagoPSR2ResponsetDto;
@@ -9,8 +11,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class SolicitudEstadoPagoMapper {
 	
+	private static final Logger  logger= Logger.getLogger(SolicitudEstadoPagoMapper.class);
+
 	public SolicitudEstadoPagoPSR2ResponsetDto getSolicitudEstadoPagoPSR1(SolicitudEstadoPagoPSR1RequestDto request)
 	{
+		logger.info("Solicitud Estado de Pago PSR2 Mapper");
 		SolicitudEstadoPagoPSR2ResponsetDto solicitudEstadoPagoPSR2ResponsetDto = new SolicitudEstadoPagoPSR2ResponsetDto();
 		
 		
