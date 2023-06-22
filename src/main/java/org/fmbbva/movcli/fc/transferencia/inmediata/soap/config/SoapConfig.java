@@ -1,6 +1,7 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.soap.config;
 
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.ClientSoap;
+import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.EchoTestSoap;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
@@ -25,4 +26,15 @@ public class SoapConfig {
 
 	        return soapClient;
 	    }
+
+
+		 @Bean
+		    public EchoTestSoap getEchoTestSoap(Jaxb2Marshaller marshaller){
+			 	EchoTestSoap echoTestSoap = new EchoTestSoap();
+			 	echoTestSoap.setDefaultUri("https://btdes.cnpdes.local:9443/desarrollo/servlet/com.dlya.bantotal.awsbthabilitartin");
+			 	echoTestSoap.setMarshaller(marshaller);
+			 	echoTestSoap.setUnmarshaller(marshaller);
+
+		        return echoTestSoap;
+		    }
 }

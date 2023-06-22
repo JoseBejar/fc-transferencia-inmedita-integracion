@@ -18,7 +18,6 @@ public class OrdenTransferenciaSoapCT2RequestDto {
 
 	public OrdenTransferenciaSoapCT2RequestDto() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public BTExtReqDto getbTExtReqDto() {

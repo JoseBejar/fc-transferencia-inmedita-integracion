@@ -22,7 +22,6 @@ public class EchoTestSoapET1Request {
 
 	public EchoTestSoapET1Request() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public EchoTestSoapET1Request(BTExtReqDto bTExtReqDto, EchoTestRequestET1Dto echoTestRequestET1Dto, int idcamara,

@@ -23,6 +23,7 @@ import org.tempuri.action.WsBTRecepcionTINExecute;
 public class ConsultaCuentaServiceImpl implements ConsultaCuentaService{
 	
 	private static final Logger  logger= Logger.getLogger(ConsultaCuentaServiceImpl.class);
+	
 	@Autowired
 	private ConsultaCuentaMapper consultaCuentaMapper;
 	
