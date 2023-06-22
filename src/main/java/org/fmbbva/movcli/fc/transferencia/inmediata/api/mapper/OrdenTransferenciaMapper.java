@@ -59,7 +59,7 @@ public class OrdenTransferenciaMapper {
 		ct3Dto.setResponseDate(null);
 		ct3Dto.setResponseTime(null);
 		ct3Dto.setTerminalId(request.getCt2Dto().getTerminalId());
-		ct3Dto.setRetrievalReferenteNumber(request.getCt2Dto().getRetrievalReferenteNumber());
+		ct3Dto.setretrievalReferenceNumber(request.getCt2Dto().getretrievalReferenceNumber());
 		ct3Dto.setTrace(request.getCt2Dto().getTrace());
 		ct3Dto.setAmount(null);
 		ct3Dto.setCurrency(null);

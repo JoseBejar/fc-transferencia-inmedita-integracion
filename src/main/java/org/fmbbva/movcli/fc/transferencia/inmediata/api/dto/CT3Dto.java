@@ -7,7 +7,7 @@ public class CT3Dto {
 	private String responseDate;
 	private String responseTime;
 	private String terminalId;
-	private String retrievalReferenteNumber;
+	private String retrievalReferenceNumber;
 	private String trace;
 	private String amount;
 	private String currency;
@@ -28,7 +28,7 @@ public class CT3Dto {
 		// TODO Auto-generated constructor stub
 	}
 	public CT3Dto(String debtorParticipantCode, String creditorParticipantCode,
-			String responseDate, String responseTime, String terminalId, String retrievalReferenteNumber, String trace,
+			String responseDate, String responseTime, String terminalId, String retrievalReferenceNumber, String trace,
 			String amount, String currency, String transactionReference, String responseCode, String reasonCode,
 			String feeAmount, String settlementDate, String transactionType, String debtorCCI, String creditorCCI,
 			String creditorCreditCard, String sameCustomerFlag, String branchId, String instructionId) {
@@ -38,7 +38,7 @@ public class CT3Dto {
 		this.responseDate = responseDate;
 		this.responseTime = responseTime;
 		this.terminalId = terminalId;
-		this.retrievalReferenteNumber = retrievalReferenteNumber;
+		this.retrievalReferenceNumber = retrievalReferenceNumber;
 		this.trace = trace;
 		this.amount = amount;
 		this.currency = currency;
@@ -85,11 +85,11 @@ public class CT3Dto {
 	public void setTerminalId(String terminalId) {
 		this.terminalId = terminalId;
 	}
-	public String getRetrievalReferenteNumber() {
-		return retrievalReferenteNumber;
+	public String getretrievalReferenceNumber() {
+		return retrievalReferenceNumber;
 	}
-	public void setRetrievalReferenteNumber(String retrievalReferenteNumber) {
-		this.retrievalReferenteNumber = retrievalReferenteNumber;
+	public void setretrievalReferenceNumber(String retrievalReferenceNumber) {
+		this.retrievalReferenceNumber = retrievalReferenceNumber;
 	}
 	public String getTrace() {
 		return trace;
