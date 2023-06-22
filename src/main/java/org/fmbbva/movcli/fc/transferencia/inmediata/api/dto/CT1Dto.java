@@ -400,5 +400,75 @@ public class CT1Dto {
 		this.yearOfThePayment = yearOfThePayment;
 	}
 
+	@Override
+	public String toString() {
+		return "CT1Dto [debtorParticipantCode=" + debtorParticipantCode + ", creditorParticipantCode="
+				+ creditorParticipantCode + ", creationDate=" + creationDate + ", creationTime=" + creationTime
+				+ ", messageTypeId=" + messageTypeId + ", terminalId=" + terminalId + ", retrievalReferenteNumber="
+				+ retrievalReferenteNumber + ", trace=" + trace + ", channel=" + channel + ", amount=" + amount
+				+ ", currency=" + currency + ", transactionReference=" + transactionReference
+				+ ", referenceTransactionId=" + referenceTransactionId + ", transactionType=" + transactionType
+				+ ", feeAmount=" + feeAmount + ", feeCode=" + feeCode + ", applicationCriteria=" + applicationCriteria
+				+ ", debtorTypeOfPerson=" + debtorTypeOfPerson + ", debtorName=" + debtorName + ", debtorAddressLine="
+				+ debtorAddressLine + ", debtorIdCode=" + debtorIdCode + ", debtorId=" + debtorId
+				+ ", debtorPhoneNumber=" + debtorPhoneNumber + ", debtorMobileNumber=" + debtorMobileNumber
+				+ ", debtorCCI=" + debtorCCI + ", creditorName=" + creditorName + ", creditorAddressLine="
+				+ creditorAddressLine + ", creditorPhoneNumber=" + creditorPhoneNumber + ", creditorMobileNumber="
+				+ creditorMobileNumber + ", creditorCCI=" + creditorCCI + ", creditorCreditCard=" + creditorCreditCard
+				+ ", sameCustomerFlag=" + sameCustomerFlag + ", purposeCode=" + purposeCode
+				+ ", unstructuredInformation=" + unstructuredInformation + ", grossSalaryAmount=" + grossSalaryAmount
+				+ ", salaryPaymentIndicator=" + salaryPaymentIndicator + ", monthOfThePayment=" + monthOfThePayment
+				+ ", yearOfThePayment=" + yearOfThePayment + "]";
+	}
+	
+	public String buildJSON() {
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("{\"CT1\":{");
+		sb.append("\"debtorParticipantCode\" : \""+getDebtorParticipantCode()+"\",");
+		sb.append("\"creditorParticipantCode\" : \""+getCreditorParticipantCode()+"\",");
+		sb.append("\"creationDate\" : \""+getCreationDate()+"\",");
+		sb.append("\"messageTypeId\" : \""+getMessageTypeId()+"\",");
+		sb.append("\"terminalId\" : \""+getTerminalId()+"\",");
+		sb.append("\"retrievalReferenteNumber\" : \""+getRetrievalReferenteNumber()+"\",");
+		sb.append("\"trace\" : \""+getTrace()+"\",");
+		sb.append("\"channel\" : \""+getChannel()+"\",");
+		sb.append("\"amount\" : \""+getAmount()+"\",");
+		sb.append("\"currency\" : \""+getCurrency()+"\",");
+		sb.append("\"transactionReference\" : \""+getTransactionReference()+"\",");
+		sb.append("\"referenceTransactionId\" : \""+getReferenceTransactionId()+"\",");
+		sb.append("\"transactionType\" : \""+getTransactionType()+"\",");
+		sb.append("\"feeAmount\" : \""+getFeeAmount()+"\",");
+		sb.append("\"feeCode\" : \""+getFeeCode()+"\",");
+		sb.append("\"applicationCriteria\" : \""+getApplicationCriteria()+"\",");
+		sb.append("\"debtorTypeOfPerson\" : \""+getDebtorTypeOfPerson()+"\",");
+		sb.append("\"debtorName\" : \""+getDebtorName()+"\",");
+		sb.append("\"debtorAddressLine\" : \""+getDebtorAddressLine()+"\",");
+		sb.append("\"debtorIdCode\" : \""+getDebtorIdCode()+"\",");
+		sb.append("\"debtorId\" : \""+getDebtorId()+"\",");
+		sb.append("\"debtorPhoneNumber\" : \""+getDebtorPhoneNumber()+"\",");
+		sb.append("\"debtorMobileNumber\" : \""+getDebtorMobileNumber()+"\",");
+		sb.append("\"debtorCCI\" : \""+getDebtorCCI()+"\",");
+		sb.append("\"creditorName\" : \""+getCreditorName()+"\",");
+		sb.append("\"creditorAddressLine\" : \""+getCreditorAddressLine()+"\",");
+		sb.append("\"creditorPhoneNumber\" : \""+getCreditorPhoneNumber()+"\",");
+		sb.append("\"creditorMobileNumber\" : \""+getCreditorMobileNumber()+"\",");
+		sb.append("\"creditorCCI\" : \""+getCreditorCCI()+"\",");
+		sb.append("\"creditorCreditCard\" : \""+getCreditorCreditCard()+"\",");
+		sb.append("\"sameCustomerFlag\" : \""+getSameCustomerFlag()+"\",");
+		sb.append("\"purposeCode\" : \""+getPurposeCode()+"\",");
+		sb.append("\"unstructuredInformation\" : \""+getUnstructuredInformation()+"\",");
+		sb.append("\"grossSalaryAmount\" : \""+getGrossSalaryAmount()+"\",");
+		sb.append("\"salaryPaymentIndicator\" : \""+getSalaryPaymentIndicator()+"\",");
+		sb.append("\"monthOfThePayment\" : \""+getMonthOfThePayment()+"\",");
+		sb.append("\"yearOfThePayment\" : \""+getYearOfThePayment()+"\"");
+		sb.append("}");
+		sb.append("}");
+		return sb.toString();
+	}
+	
+	
+	
+
 	
 }

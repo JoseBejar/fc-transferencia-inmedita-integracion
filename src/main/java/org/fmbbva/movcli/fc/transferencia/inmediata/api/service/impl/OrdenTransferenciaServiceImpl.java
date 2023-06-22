@@ -12,7 +12,9 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.mapper.OrdenTransferenciaMapper;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.service.OrdenTransferenciaService;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.client.service.ClienteSoapService;
+import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.OrdenTransferenciaSoapCT1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.OrdenTransferenciaSoapCT2RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.OrdenTransferenciaSoapCT5RequestDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,7 +63,34 @@ public class OrdenTransferenciaServiceImpl implements OrdenTransferenciaService{
 
 			e.printStackTrace();
 		}
-		return null;
+		return response;
+	}
+
+	@Override
+	public OrdenTransferenciaCT4ResponseDto getOrdenTransferenciaSOAPCT1(
+			OrdenTransferenciaSoapCT1RequestDto ordenTransferenciaSoapCT1RequestDto) throws CertificateException {
+		OrdenTransferenciaCT4ResponseDto response = null;
+		try {
+			logger.info("Orden Transferencia CT4 SOAP service Implement");
+			response = clienteSoapService.getOrdenTransferenciaSoapCT1(ordenTransferenciaSoapCT1RequestDto);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return response;
+	}
+
+	@Override
+	public OrdenTransferenciaCT5ResponseDto getOrdenTransferenciaSOAPCT5(
+			OrdenTransferenciaSoapCT5RequestDto ordenTransferenciaSoapCT5RequestDto) throws CertificateException {
+		OrdenTransferenciaCT5ResponseDto response = null;
+		try {
+			logger.info("Orden Transferencia CT4 SOAP service Implement");
+			response = clienteSoapService.getOrdenTransferenciaSoapCT5(ordenTransferenciaSoapCT5RequestDto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return  response;
 	}
 
 	

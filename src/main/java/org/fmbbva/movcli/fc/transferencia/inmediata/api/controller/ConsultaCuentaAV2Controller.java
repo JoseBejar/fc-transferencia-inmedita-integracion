@@ -22,7 +22,7 @@ public class ConsultaCuentaAV2Controller {
 	private static final Logger  logger= Logger.getLogger(ConsultaCuentaAV2Controller.class);
 
 	@Autowired
-	public ConsultaCuentaService consultaCuentaService;
+	private ConsultaCuentaService consultaCuentaService;
 	
 
 	

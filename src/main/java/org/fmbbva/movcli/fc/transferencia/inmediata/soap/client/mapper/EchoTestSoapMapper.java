@@ -6,6 +6,7 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.ConsultaCuentaAV3Res
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestResponseET2Dto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.ConsultaCuentaSoapAV2Request;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.EchoTestSoapET1Request;
+import org.springframework.stereotype.Component;
 import org.tempuri.action.WsBTHabilitarTINExecute;
 import org.tempuri.action.WsBTHabilitarTINExecuteResponse;
 import org.tempuri.action.WsBTRecepcionTINExecute;
@@ -17,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import bantotal.dlya.com.uy.btservice.BTExtReq;
 
+@Component
 public class EchoTestSoapMapper {
 	private static final Logger log = LogManager.getLogger(EchoTestSoapMapper.class); 	
 

@@ -86,7 +86,7 @@ public class TransferenciaInmediataController {
 	
 	@PostMapping(value = "/AV2")
 	public ResponseEntity<ConsultaCuentaAV3ResponseDto> getWsBTConsultaCuentaAV2(@RequestBody ConsultaCuentaAV2RequestDto request) {
-		logger.info("Recibiendo Consulta del servicio Av1");
+		logger.info("Recibiendo Consulta del servicio Av2");
 		ConsultaCuentaAV3ResponseDto response = consultaCuentaAV1Service.getConsultaCuentaAV2(request);
 		return new ResponseEntity<ConsultaCuentaAV3ResponseDto>(response, HttpStatus.CREATED);
 		

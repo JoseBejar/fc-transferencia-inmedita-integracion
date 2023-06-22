@@ -8,7 +8,9 @@ import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT4ResponseDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.OrdenTransferenciaCT5ResponseDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.OrdenTransferenciaSoapCT1RequestDto;
 import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.OrdenTransferenciaSoapCT2RequestDto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto.OrdenTransferenciaSoapCT5RequestDto;
 
 public interface OrdenTransferenciaService {
 	
@@ -21,4 +23,9 @@ public interface OrdenTransferenciaService {
 	
 	public OrdenTransferenciaCT3ResponseDto getOrdenTransferenciaSOAPCT2(OrdenTransferenciaSoapCT2RequestDto ordenTransferenciaSoapCT2RequestDto)throws CertificateException;
 	
+	public OrdenTransferenciaCT4ResponseDto getOrdenTransferenciaSOAPCT1(OrdenTransferenciaSoapCT1RequestDto ordenTransferenciaSoapCT1RequestDto) throws CertificateException;
+	
+	public OrdenTransferenciaCT5ResponseDto getOrdenTransferenciaSOAPCT5(OrdenTransferenciaSoapCT5RequestDto ordenTransferenciaSoapCT5RequestDto) throws CertificateException;
+	
+
 }

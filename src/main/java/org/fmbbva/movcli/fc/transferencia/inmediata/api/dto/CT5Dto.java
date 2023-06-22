@@ -199,6 +199,40 @@ public class CT5Dto {
 		this.interbankSettlementAmount = interbankSettlementAmount;
 	}
 	
+public String buildJSON() {
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("{\"CT5\":{");
+		sb.append("\"responseCode\" : \""+getResponseCode()+"\",");
+//		sb.append("\"debtorParticipantCode\" : \""+getDebtorParticipantCode()+"\",");
+//		sb.append("\"creditorParticipantCode\" : \""+getCreditorParticipantCode()+"\",");
+//		sb.append("\"responseDate\" : \""+getResponseDate()+"\",");
+//		sb.append("\"responseTime\" : \""+getResponseTime()+"\",");
+//		sb.append("\"terminalId\" : \""+getTerminalId()+"\",");
+//		sb.append("\"retrievalReferenteNumber\" : \""+getRetrievalReferenteNumber()+"\",");
+//		sb.append("\"trace\" : \""+getTrace()+"\",");
+//		sb.append("\"amount\" : \""+getFeeAmount()+"\",");
+//		sb.append("\"currency\" : \""+getCurrency()+"\",");
+//		sb.append("\"transactionReference\" : \""+getTransactionReference()+"\",");
+//		sb.append("\"responseCode\" : \""+getResponseCode()+"\",");
+//		sb.append("\"feeAmount\" : \""+getFeeAmount()+"\",");
+//		sb.append("\"settlementDate\" : \""+getSettlementDate()+"\",");
+//		sb.append("\"transactionType\" : \""+getTransactionType()+"\",");
+//		sb.append("\"debtorCCI\" : \""+getDebtorCCI()+"\",");
+//		sb.append("\"creditorCCI\" : \""+getCreditorCCI()+"\",");
+//		sb.append("\"creditorCreditCard\" : \""+getCreditorCreditCard()+"\",");
+//		sb.append("\"sameCustomerFlag\" : \""+getSameCustomerFlag()+"\",");
+//		sb.append("\"instructionId\" : \""+getInstructionId()+"\",");
+//		sb.append("\"creationDate\" : \""+getCreationDate()+"\",");
+//		sb.append("\"creationTime\" : \""+getCreationTime()+"\",");
+//		sb.append("\"channel\" : \""+getChannel()+"\",");
+//		sb.append("\"interbankSettlementAmount\" : \""+getInterbankSettlementAmount()+"\"");
+		sb.append("}");
+		sb.append("}");
+		return sb.toString();
+	}
+	
+	
 	
 
 }

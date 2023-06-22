@@ -20,7 +20,7 @@ public class EchoTestController {
 
 
 	@Autowired
-	public EchoTestService echoTestService;
+	private EchoTestService echoTestService;
 	
 	@PostMapping(value = "/soap/ET1")
 	public ResponseEntity<EchoTestResponseET2Dto> getWsEchoTestET1(@RequestBody EchoTestSoapET1Request request) throws Exception {

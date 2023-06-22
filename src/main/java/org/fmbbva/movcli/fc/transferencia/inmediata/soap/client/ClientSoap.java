@@ -20,7 +20,7 @@ public class ClientSoap extends WebServiceGatewaySupport {
 
 	public WsBTRecepcionTINExecuteResponse getWsBTRecepcionTIN(WsBTRecepcionTINExecute request) {
 		
-		log.info("Obteniendo el servicio  SOAP RECEPCION");
+		log.info("Obteniendo el servicio  SOAP RECEPCIONTIN");
 		WsBTRecepcionTINExecuteResponse response = new WsBTRecepcionTINExecuteResponse();
 				
 		WsBTRecepcionTIN service = new WsBTRecepcionTIN();
