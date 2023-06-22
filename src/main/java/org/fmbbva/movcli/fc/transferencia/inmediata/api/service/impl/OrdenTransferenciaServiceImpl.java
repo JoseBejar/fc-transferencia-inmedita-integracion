@@ -57,7 +57,7 @@ public class OrdenTransferenciaServiceImpl implements OrdenTransferenciaService{
 		
 		OrdenTransferenciaCT3ResponseDto response = null;
 		try {
-			logger.info("Orden Transferencia CT3 SOAP service Implement");
+			logger.info("Orden Transferencia CT2 SOAP service Implement");
 			response = clienteSoapService.getOrdenTransferenciaSoapCT2(ordenTransferenciaSoapCT2RequestDto);
 		} catch (Exception e) {
 

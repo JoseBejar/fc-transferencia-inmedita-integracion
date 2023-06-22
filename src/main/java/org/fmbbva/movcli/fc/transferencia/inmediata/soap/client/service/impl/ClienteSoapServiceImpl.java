@@ -41,8 +41,6 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 		
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute = clienteSoapMapper.getAV2SoapMapper(consultaCuentaSoapAV2Request);
 		WsBTRecepcionTINExecuteResponse response = clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);
-		
-		//JSONObject json = WSDLUtil.convertResponseWSDLtoString(response, "Errores");
 		ConsultaCuentaAV3ResponseDto responseAv3 = clienteSoapMapper.getAV3SoapMapper(response);
 		
 		return responseAv3;
@@ -52,7 +50,7 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 	@Override
 	public OrdenTransferenciaCT3ResponseDto getOrdenTransferenciaSoapCT2(
 			OrdenTransferenciaSoapCT2RequestDto ordenTransferenciaSoapCT2RequestDto) throws Exception {
-		log.info("Orden Transferencia CT3 SOAP Implement");
+		log.info("Orden Transferencia CT2 SOAP Implement");
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute = clienteSoapMapper.getCT2SoapMapper(ordenTransferenciaSoapCT2RequestDto);
 		WsBTRecepcionTINExecuteResponse response =clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);
 		
