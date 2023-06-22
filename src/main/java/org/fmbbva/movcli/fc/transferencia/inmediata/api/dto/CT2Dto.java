@@ -7,7 +7,7 @@ public class CT2Dto {
 	private String creationDate;
 	private String creationTime;
 	private String terminalId;
-	private String retrievalReferenceNumber;
+	private String retrievalReferenteNumber;
 	private String trace;
 	private String channel;
 	private String amount;
@@ -54,7 +54,7 @@ public class CT2Dto {
 
 
 	public CT2Dto(String debtorParticipantCode, String creditorParticipantCode, String creationDate,
-			String creationTime, String terminalId, String retrievalReferenceNumber, String trace, String channel,
+			String creationTime, String terminalId, String retrievalReferenteNumber, String trace, String channel,
 			String amount, String currency, String transactionReference, String referenceTransactionId,
 			String transactionType, String feeAmount, String feeCode, String applicationCriteria,
 			String debtorTypeOfPerson, String debtorName, String debtorAddressLine, String debtorIdCode,
@@ -69,7 +69,7 @@ public class CT2Dto {
 		this.creationDate = creationDate;
 		this.creationTime = creationTime;
 		this.terminalId = terminalId;
-		this.retrievalReferenceNumber = retrievalReferenceNumber;
+		this.retrievalReferenteNumber = retrievalReferenteNumber;
 		this.trace = trace;
 		this.channel = channel;
 		this.amount = amount;
@@ -169,14 +169,14 @@ public class CT2Dto {
 
 
 
-	public String getretrievalReferenceNumber() {
-		return retrievalReferenceNumber;
+	public String getretrievalReferenteNumber() {
+		return retrievalReferenteNumber;
 	}
 
 
 
-	public void setretrievalReferenceNumber(String retrievalReferenceNumber) {
-		this.retrievalReferenceNumber = retrievalReferenceNumber;
+	public void setretrievalReferenteNumber(String retrievalReferenteNumber) {
+		this.retrievalReferenteNumber = retrievalReferenteNumber;
 	}
 
 
@@ -605,7 +605,7 @@ public class CT2Dto {
 	public String toString() {
 		return "CT2Dto [debtorParticipantCode=" + debtorParticipantCode + ", creditorParticipantCode="
 				+ creditorParticipantCode + ", creationDate=" + creationDate + ", creationTime=" + creationTime
-				+ ", terminalId=" + terminalId + ", retrievalReferenceNumber=" + retrievalReferenceNumber + ", trace="
+				+ ", terminalId=" + terminalId + ", retrievalReferenteNumber=" + retrievalReferenteNumber + ", trace="
 				+ trace + ", channel=" + channel + ", amount=" + amount + ", currency=" + currency
 				+ ", transactionReference=" + transactionReference + ", referenceTransactionId="
 				+ referenceTransactionId + ", transactionType=" + transactionType + ", feeAmount=" + feeAmount
@@ -634,7 +634,7 @@ public class CT2Dto {
 		sb.append("\"creationDate\" : \""+getCreationDate()+"\",");
 		sb.append("\"creationTime\" : \""+getCreationTime()+"\",");
 		sb.append("\"terminalId\" : \""+getTerminalId()+"\",");
-		sb.append("\"retrievalReferenceNumber\" : \""+getretrievalReferenceNumber()+"\",");
+		sb.append("\"retrievalReferenteNumber\" : \""+getretrievalReferenteNumber()+"\",");
 		sb.append("\"trace\" : \""+getTrace()+"\",");
 		sb.append("\"channel\" : \""+getChannel()+"\",");
 		sb.append("\"amount\" : \""+getAmount()+"\",");
