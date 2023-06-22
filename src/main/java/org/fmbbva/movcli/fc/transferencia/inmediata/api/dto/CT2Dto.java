@@ -634,7 +634,7 @@ public class CT2Dto {
 		sb.append("\"creationDate\" : \""+getCreationDate()+"\",");
 		sb.append("\"creationTime\" : \""+getCreationTime()+"\",");
 		sb.append("\"terminalId\" : \""+getTerminalId()+"\",");
-		sb.append("\"retrievalReferenteNumbee\" : \""+getretrievalReferenceNumber()+"\",");
+		sb.append("\"retrievalReferenceNumber\" : \""+getretrievalReferenceNumber()+"\",");
 		sb.append("\"trace\" : \""+getTrace()+"\",");
 		sb.append("\"channel\" : \""+getChannel()+"\",");
 		sb.append("\"amount\" : \""+getAmount()+"\",");
