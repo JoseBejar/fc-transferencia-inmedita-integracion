@@ -21,7 +21,9 @@ import bantotal.dlya.com.uy.btservice.BTExtReq;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="Extreq" type="{http://uy.com.dlya.bantotal/BTService/}BTExtReq"/&gt;
- *         &lt;element name="Dscrespuesta" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="Payload" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="Coderr" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+ *         &lt;element name="Errdsc" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="Erroresnegocio" type="{http://uy.com.dlya.bantotal/BTService/}BTErroresNegocio"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -34,7 +36,9 @@ import bantotal.dlya.com.uy.btservice.BTExtReq;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "extreq",
-    "dscrespuesta",
+    "payload",
+    "coderr",
+    "errdsc",
     "erroresnegocio"
 })
 @XmlRootElement(name = "wsBTHabilitarTIN.ExecuteResponse")
@@ -42,8 +46,12 @@ public class WsBTHabilitarTINExecuteResponse {
 
     @XmlElement(name = "Extreq", required = true)
     protected BTExtReq extreq;
-    @XmlElement(name = "Dscrespuesta", required = true)
-    protected String dscrespuesta;
+    @XmlElement(name = "Payload", required = true)
+    protected String payload;
+    @XmlElement(name = "Coderr")
+    protected short coderr;
+    @XmlElement(name = "Errdsc", required = true)
+    protected String errdsc;
     @XmlElement(name = "Erroresnegocio", required = true)
     protected BTErroresNegocio erroresnegocio;
 
@@ -72,27 +80,67 @@ public class WsBTHabilitarTINExecuteResponse {
     }
 
     /**
-     * Obtiene el valor de la propiedad dscrespuesta.
+     * Obtiene el valor de la propiedad payload.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDscrespuesta() {
-        return dscrespuesta;
+    public String getPayload() {
+        return payload;
     }
 
     /**
-     * Define el valor de la propiedad dscrespuesta.
+     * Define el valor de la propiedad payload.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDscrespuesta(String value) {
-        this.dscrespuesta = value;
+    public void setPayload(String value) {
+        this.payload = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad coderr.
+     * 
+     */
+    public short getCoderr() {
+        return coderr;
+    }
+
+    /**
+     * Define el valor de la propiedad coderr.
+     * 
+     */
+    public void setCoderr(short value) {
+        this.coderr = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad errdsc.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getErrdsc() {
+        return errdsc;
+    }
+
+    /**
+     * Define el valor de la propiedad errdsc.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setErrdsc(String value) {
+        this.errdsc = value;
     }
 
     /**

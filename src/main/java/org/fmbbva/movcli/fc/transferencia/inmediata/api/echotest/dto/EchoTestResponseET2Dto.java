@@ -25,6 +25,9 @@ public class EchoTestResponseET2Dto {
 	public void setEt2(ET2 et2) {
 		this.et2 = et2;
 	}
+
+	
+	
 	
 	
 

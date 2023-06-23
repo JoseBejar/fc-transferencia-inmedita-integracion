@@ -27,7 +27,7 @@ public class EchoTestSoapServiceImpl implements EchoTestSoapService {
 	
 	@Override
 	public EchoTestResponseET2Dto getEchotestSoapET1(EchoTestSoapET1Request echoTestSoapET1Request) {
-		log.info("EchoTesti Implements");
+		log.info("EchoTest  Implements");
 		WsBTHabilitarTINExecute wsBTHabilitarTINExecute = echoTestSoapMapper.getET1SoapMapper(echoTestSoapET1Request);
 		WsBTHabilitarTINExecuteResponse response = echoTestSoap.getWsBTHabilitarTIN(wsBTHabilitarTINExecute);
 		

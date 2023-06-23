@@ -42,6 +42,26 @@ public class ET1 {
 	public void setTrace(String trace) {
 		this.trace = trace;
 	}
+	@Override
+	public String toString() {
+		return "ET1 [participantCode=" + participantCode + ", creationDate=" + creationDate + ", creationTime="
+				+ creationTime + ", trace=" + trace + "]";
+	}
+	
+	 public String buildJSON() {
+		    StringBuilder sb = new StringBuilder();
+		    sb.append("{\"ET1\":{");
+		    sb.append("\"participantCode\": \"" + getParticipantCode() + "\",");
+		    sb.append("\"creationDate\": \"" + getCreationDate()+ "\",");
+			sb.append("\"creationTime\": \"" + getCreationTime() + "\",");
+			sb.append("\"trace\": \"" + getTrace() + "\",");
+		    sb.append("}");
+		    sb.append("}");
+		    return sb.toString();
+		}
+
+	
+	
 	
 	
 

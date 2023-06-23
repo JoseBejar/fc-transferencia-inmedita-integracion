@@ -1,7 +1,7 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.soap.dto;
 
 import org.fmbbva.movcli.fc.transferencia.inmediata.api.dto.BTExtReqDto;
-import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.EchoTestRequestET1Dto;
+import org.fmbbva.movcli.fc.transferencia.inmediata.api.echotest.dto.ET1;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -11,26 +11,22 @@ public class EchoTestSoapET1Request {
 	@JsonProperty("extreq")
 	 private BTExtReqDto bTExtReqDto;
 	
-	@JsonProperty("ET1")
-	private EchoTestRequestET1Dto echoTestRequestET1Dto;
-
 	@JsonProperty("idcamara")
 	private int idcamara;
 	
-	@JsonProperty("accion")
-	private String accion;
+	@JsonProperty("ET1")
+	private ET1 et1Dto;
 
 	public EchoTestSoapET1Request() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public EchoTestSoapET1Request(BTExtReqDto bTExtReqDto, EchoTestRequestET1Dto echoTestRequestET1Dto, int idcamara,
-			String accion) {
+	public EchoTestSoapET1Request(BTExtReqDto bTExtReqDto, int idcamara, ET1 et1Dto) {
 		super();
 		this.bTExtReqDto = bTExtReqDto;
-		this.echoTestRequestET1Dto = echoTestRequestET1Dto;
 		this.idcamara = idcamara;
-		this.accion = accion;
+		this.et1Dto = et1Dto;
 	}
 
 	public BTExtReqDto getbTExtReqDto() {
@@ -41,14 +37,6 @@ public class EchoTestSoapET1Request {
 		this.bTExtReqDto = bTExtReqDto;
 	}
 
-	public EchoTestRequestET1Dto getEchoTestRequestET1Dto() {
-		return echoTestRequestET1Dto;
-	}
-
-	public void setEchoTestRequestET1Dto(EchoTestRequestET1Dto echoTestRequestET1Dto) {
-		this.echoTestRequestET1Dto = echoTestRequestET1Dto;
-	}
-
 	public int getIdcamara() {
 		return idcamara;
 	}
@@ -57,14 +45,19 @@ public class EchoTestSoapET1Request {
 		this.idcamara = idcamara;
 	}
 
-	public String getAccion() {
-		return accion;
+	public ET1 getEt1Dto() {
+		return et1Dto;
 	}
 
-	public void setAccion(String accion) {
-		this.accion = accion;
+	public void setEt1Dto(ET1 et1Dto) {
+		this.et1Dto = et1Dto;
 	}
+	
+	
+	
+	
 
+	
 	
 	
 	

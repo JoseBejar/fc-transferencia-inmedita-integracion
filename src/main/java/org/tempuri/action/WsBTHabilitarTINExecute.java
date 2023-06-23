@@ -21,7 +21,7 @@ import bantotal.dlya.com.uy.btservice.BTExtReq;
  *       &lt;sequence&gt;
  *         &lt;element name="Extreq" type="{http://uy.com.dlya.bantotal/BTService/}BTExtReq"/&gt;
  *         &lt;element name="Idcamara" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
- *         &lt;element name="Accion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="Payload" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -34,7 +34,7 @@ import bantotal.dlya.com.uy.btservice.BTExtReq;
 @XmlType(name = "", propOrder = {
     "extreq",
     "idcamara",
-    "accion"
+    "payload"
 })
 @XmlRootElement(name = "wsBTHabilitarTIN.Execute")
 public class WsBTHabilitarTINExecute {
@@ -43,8 +43,8 @@ public class WsBTHabilitarTINExecute {
     protected BTExtReq extreq;
     @XmlElement(name = "Idcamara")
     protected short idcamara;
-    @XmlElement(name = "Accion", required = true)
-    protected String accion;
+    @XmlElement(name = "Payload", required = true)
+    protected String payload;
 
     /**
      * Obtiene el valor de la propiedad extreq.
@@ -87,27 +87,27 @@ public class WsBTHabilitarTINExecute {
     }
 
     /**
-     * Obtiene el valor de la propiedad accion.
+     * Obtiene el valor de la propiedad payload.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getAccion() {
-        return accion;
+    public String getPayload() {
+        return payload;
     }
 
     /**
-     * Define el valor de la propiedad accion.
+     * Define el valor de la propiedad payload.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setAccion(String value) {
-        this.accion = value;
+    public void setPayload(String value) {
+        this.payload = value;
     }
 
 }
