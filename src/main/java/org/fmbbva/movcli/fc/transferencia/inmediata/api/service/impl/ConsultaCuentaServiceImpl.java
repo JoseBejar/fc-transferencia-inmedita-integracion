@@ -55,7 +55,7 @@ public class ConsultaCuentaServiceImpl implements ConsultaCuentaService{
 				response = clienteSoapService.getConsultaCuentaSoapAV2(consultaCuentaSoapAV2Request);
 			} catch (Exception e) {
 				e.printStackTrace();
-				logger.error(" Ocurrió un error getConsultaCuentaSoapAV2 de Consulta  Soap AV2");
+				logger.error(" Ocurrió un error getConsultaCuentaSoapAV2 en la invocacion del servicoio Soap");
 			}
 			logger.info("Fin getConsultaCuentaSoapAV2 de Consulta Soap AV2");
 	

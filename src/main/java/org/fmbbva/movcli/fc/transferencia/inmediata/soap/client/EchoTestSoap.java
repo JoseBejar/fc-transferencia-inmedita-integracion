@@ -28,6 +28,8 @@ public class EchoTestSoap extends WebServiceGatewaySupport {
 			} catch (Exception e) {
 				log.error("Error obtener habilatar TIN  : "  + e.getMessage());
 			}
+			log.info("Fin al obtener el servicio HabilitarTIN Soap");	
+
 			return response;
 		}
 }
