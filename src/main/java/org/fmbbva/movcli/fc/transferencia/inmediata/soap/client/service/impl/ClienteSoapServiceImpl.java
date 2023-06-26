@@ -37,13 +37,20 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 
 	@Override
 	public ConsultaCuentaAV3ResponseDto getConsultaCuentaSoapAV2(ConsultaCuentaSoapAV2Request consultaCuentaSoapAV2Request) throws Exception {
-		log.info("Ingresando al servicio  Soap getConsultaCuentaSoapAV2 ");
-		
+		log.info("Inicio -getConsultaCuentaSoapAV2 - invocando WsBTRecepcionTINExecute, WsBTRecepcionTINExecuteResponse, ConsultaCuentaAV3ResponseDto");
+
+
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute = clienteSoapMapper.getAV2SoapMapper(consultaCuentaSoapAV2Request);
+		log.info("Inicio - getConsultaCuentaSoapAV2 - invocando a cliente mapper av2 ");
+
 		WsBTRecepcionTINExecuteResponse response = clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);
-		ConsultaCuentaAV3ResponseDto responseAv3 = clienteSoapMapper.getAV3SoapMapper(response);
+		log.info("Inicio - getConsultaCuentaSoapAV2 - invocando BtsRecepcionTin ");
 		
-		log.info("Fin del  servicio  Soap getConsultaCuentaSoapAV2 ");
+		ConsultaCuentaAV3ResponseDto responseAv3 = clienteSoapMapper.getAV3SoapMapper(response);
+		log.info("Inicio - getConsultaCuentaSoapAV2 - invocando cliente mapper av3 ");
+
+	
+		log.info("Fin -getConsultaCuentaSoapAV2 - llamado de WsBTRecepcionTINExecute, WsBTRecepcionTINExecuteResponse, ConsultaCuentaAV3ResponseDto");
 		return responseAv3;
 	}
 

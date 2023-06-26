@@ -27,12 +27,17 @@ public class EchoTestSoapServiceImpl implements EchoTestSoapService {
 	
 	@Override
 	public EchoTestResponseET2Dto getEchotestSoapET1(EchoTestSoapET1Request echoTestSoapET1Request) {
-		log.info("Ingresando al  servico Soap getEchotestSoapET1");
+		log.info("Inicio - getEchotestSoapET1 - invocando  WsBTHabilitarTINExecute , WsBTHabilitarTINExecuteResponse");
 		WsBTHabilitarTINExecute wsBTHabilitarTINExecute = echoTestSoapMapper.getET1SoapMapper(echoTestSoapET1Request);
+		log.info("Inicio - getEchotestSoapET1 - llamando getET1SoapMapper  ");
+
 		WsBTHabilitarTINExecuteResponse response = echoTestSoap.getWsBTHabilitarTIN(wsBTHabilitarTINExecute);
-		
+		log.info("Inicio - getEchotestSoapET1 - llamando  servicop getWsBTHabilitarTIN ");
+
 		EchoTestResponseET2Dto responseET2 =echoTestSoapMapper.getET2SoapMapper(response);
-		log.info("Fin del  servico Soap getEchotestSoapET1");
+		log.info("Inicio - getEchotestSoapET1 - llamando  servicop getET2SoapMapperN ");
+
+		log.info("Fin - getEchotestSoapET1 - finalizando  ");
 		return responseET2;
 	}
 

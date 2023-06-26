@@ -16,7 +16,7 @@ public class ConsultaCuentaMapper {
 
 	
 	public ConsultaCuentaAV4ResponseDto getConsultaCuentaAV1Mapper(ConsultaCuentaAV1RequestDto request) {
-		logger.info("Ingresando  al mappeo de atributos en getConsultaCuentaAV1Mapper  AV1");
+		logger.info("Inicio -  getConsultaCuentaAV1Mapper -  mappeo de propiedades   AV1");
 
 		ConsultaCuentaAV4ResponseDto consultaCuentaAV4ResponseDto = new ConsultaCuentaAV4ResponseDto();
 		AV4Dto response = new AV4Dto();
@@ -51,14 +51,14 @@ public class ConsultaCuentaMapper {
 		response.setProxyValue(request.getAv1().getProxyValue());
 		response.setProxyType(request.getAv1().getProxyType());
 		consultaCuentaAV4ResponseDto.setAv4(response);
-		logger.info("Fin del mappeo de atributos en getConsultaCuentaAV1Mapper AV1 ");
+		logger.info("Fin - getConsultaCuentaAV1Mapper -  mappeo de propiedades AV1 ");
 
 		return consultaCuentaAV4ResponseDto;
 	}
 	
 	public ConsultaCuentaAV3ResponseDto getConsultaCuentaAV2Mapper(ConsultaCuentaAV2RequestDto request) {
 		
-		logger.info("Ingresando  al mappeo de atributos en getConsultaCuentaAV2Mapper AV2 ");
+		logger.info("Inicio -getConsultaCuentaAV2Mapper - mappeo de propiedades en AV2 ");
 
 		AV3 aV3Dto = new AV3();
 		aV3Dto.setDebtorParticipantCode(request.getAv2Dto().getDebtorParticipantCode());
@@ -86,7 +86,7 @@ public class ConsultaCuentaMapper {
 		aV3Dto.setProxyValue(request.getAv2Dto().getProxyValue());
 		aV3Dto.setProxyType(request.getAv2Dto().getProxyType());
 		ConsultaCuentaAV3ResponseDto response =  new ConsultaCuentaAV3ResponseDto(aV3Dto);
-		logger.info("Fin  al mappeo de atributos en getConsultaCuentaAV2Mapper AV2 ");
+		logger.info("Fin - getConsultaCuentaAV2Mapper -  mappeo de propiedades en AV2 ");
 
 		return response;
 	}

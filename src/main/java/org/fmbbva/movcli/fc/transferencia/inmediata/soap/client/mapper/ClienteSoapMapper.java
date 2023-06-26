@@ -32,7 +32,7 @@ public class ClienteSoapMapper {
 	private static final Logger log = LogManager.getLogger(ClienteSoapMapper.class); 	
 
 	public WsBTRecepcionTINExecute getAV2SoapMapper(ConsultaCuentaSoapAV2Request request) {
-		log.info("Ingresando  al mappeo de atributos en getAV2SoapMapper ");
+		log.info("Inicio - getAV2SoapMapper -  mappeo de propiedades Av2 ");
 		WsBTRecepcionTINExecute wsBTRecepcionTIN = new WsBTRecepcionTINExecute();
 		BTExtReq bTExtReq = new BTExtReq();
 		bTExtReq.setCanal(request.getbTExtReqDto().getCanal());
@@ -43,24 +43,25 @@ public class ClienteSoapMapper {
 		wsBTRecepcionTIN.setMpe005Idc((short)request.getMpe005idc());
 		wsBTRecepcionTIN.setPayload(request.getAv2Dto().buildJSON());
 		
-		log.info("Fin del mappeo  de atributos en getAV2SoapMapper ");
+		log.info("Fin- getAV2SoapMapper -  mappeo de propiedades Av2 ");
 		return wsBTRecepcionTIN;
 		}
 	
 	public ConsultaCuentaAV3ResponseDto getAV3SoapMapper(WsBTRecepcionTINExecuteResponse request) {
-		log.info("Iniciando conversion  de datos a Json getAV3SoapMapper");
+		
 		ConsultaCuentaAV3ResponseDto response = new ConsultaCuentaAV3ResponseDto();
 		try {
+			log.info("Inicio - getAV3SoapMapper - conversion  de propiedades a Json  Av3");
 			response =  new ObjectMapper().readValue(request.getPayload(), ConsultaCuentaAV3ResponseDto.class);
 		} catch (JsonMappingException e) {
-			log.error("Erorr no se pudo realizar la conversión getAV3SoapMapper");
-			e.printStackTrace();
+			log.error("Erorr -getAV3SoapMapper - no se pudo realizar la conversión  de las propiedades Av3 " + e);
+			
 		} catch (JsonProcessingException e) {
-			log.error("Erorr no se pudo realizar la conversión getAV3SoapMapper");
-			e.printStackTrace();
+			log.error("Eror -getAV3SoapMapper - no se pudo realizar la conversión de las propiedades Av3 "+ e);
+			
 			
 		}
-		log.info("Fin de  conversion  de datos a Json getAV3SoapMapper ");
+		log.info("Fin -getAV3SoapMapper -  de  conversion  de propiedades a Json getAV3SoapMapper ");
 		return response;
 	}
 	

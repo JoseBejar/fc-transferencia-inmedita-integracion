@@ -15,21 +15,21 @@ public class ClientSoap extends WebServiceGatewaySupport {
 
 	public WsBTRecepcionTINExecuteResponse getWsBTRecepcionTIN(WsBTRecepcionTINExecute request) {
 		
-		log.info("Ingresando al servicio de Recepcion getWsBTRecepcionTIN");
+		log.info(" Inicio- getWsBTRecepcionTIN -  servicio de Recepcion getWsBTRecepcionTIN");
 		WsBTRecepcionTINExecuteResponse response = new WsBTRecepcionTINExecuteResponse();
-				
+	
 		WsBTRecepcionTIN service = new WsBTRecepcionTIN();
 		WsBTRecepcionTINSoapPort port = service.getWsBTRecepcionTINSoapPort();
 		
 		try {
 			response = port.execute(request);
-			log.info("Obteniendo respuesta del servicio  SOAP RECEPCIONTIN");
+			log.info(" Inicio- getWsBTRecepcionTIN - Obteniendo respuesta del servicio  SOAP RECEPCIONTIN");
 
 		} catch (Exception e) {
-			log.error("Error obtener el servicio de Recepcion  : "  + e.getMessage());
+			log.error("Error - getWsBTRecepcionTIN- obtener el servicio de Recepcion  : "  + e.getMessage());
 		}
 		
-		log.info("Fin del servicio de Recepcion getWsBTRecepcionTIN");
+		log.info("Fin - getWsBTRecepcionTIN - del servicio de Recepcion getWsBTRecepcionTIN");
 		return response;
 	}
 	

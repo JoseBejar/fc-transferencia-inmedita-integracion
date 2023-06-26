@@ -26,10 +26,11 @@ public class EchoTestServiceImpl implements EchoTestService {
 	@Override
 	public EchoTestResponseET2Dto getEchoTest1(EchoTestRequestET1Dto echoTestRequestET1Dto) {
 		
-		logger.info("Ingresando al servicio getEchoTest1 ");
+		logger.info("Inicio -getEchoTest1 -  Ingresando  getEchoTest1 ");
 		EchoTestResponseET2Dto consultaEchoTestResponseET2Dto = echoTestMapper.getEchoTest1(echoTestRequestET1Dto);
-		
-		logger.info("Fin  del servicio getEchoTest1 ");
+		logger.info("Inicio -getEchoTest1 -  Invocando echoTestMapper");
+
+		logger.info("Fin -getEchoTest1 -  getEchoTest1 ");
 		return consultaEchoTestResponseET2Dto;
 	}
 
@@ -38,11 +39,14 @@ public class EchoTestServiceImpl implements EchoTestService {
 			throws CertificateException {
 		EchoTestResponseET2Dto response = null;
 		try {
-			logger.info("Servicio Soap service getEchoTestSoap1");
+			logger.info(" Inicio -getEchoTestSoap1 - consumiendo service soap echoTest");
 			response=  echoTestSoapService.getEchotestSoapET1(echoTestSoapET1Request);
 		} catch (Exception e) {
+			logger.error(" Erorr -getEchoTestSoap1 -  consumir service soap echoTest" +e);
 
 		}
+		logger.info(" Fin -getEchoTestSoap1 - consumiendo service soap echoTest");
+
 		return response;
 	}
 	

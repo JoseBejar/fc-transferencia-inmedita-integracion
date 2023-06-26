@@ -18,7 +18,7 @@ public class EchoTestSoap extends WebServiceGatewaySupport {
 		
 		
 		WsBTHabilitarTINExecuteResponse response = new WsBTHabilitarTINExecuteResponse();
-				log.info("Obteniendo servicio HabilitarTIN Soap");	
+				log.info("Inicio -getWsBTHabilitarTIN - consumiendo servicio HabilitarTIN Soap");	
 			WsBTHabilitarTIN service = new WsBTHabilitarTIN();
 			WsBTHabilitarTINSoapPort port = service.getWsBTHabilitarTINSoapPort();
 			
@@ -26,9 +26,9 @@ public class EchoTestSoap extends WebServiceGatewaySupport {
 				response = port.execute(request);
 	
 			} catch (Exception e) {
-				log.error("Error obtener habilatar TIN  : "  + e.getMessage());
+				log.error("Error - getWsBTHabilitarTIN - obtener habilatar TIN  : "  + e.getMessage());
 			}
-			log.info("Fin al obtener el servicio HabilitarTIN Soap");	
+			log.info("Fin-getWsBTHabilitarTIN - consumiendo servicio HabilitarTIN Soap");	
 
 			return response;
 		}

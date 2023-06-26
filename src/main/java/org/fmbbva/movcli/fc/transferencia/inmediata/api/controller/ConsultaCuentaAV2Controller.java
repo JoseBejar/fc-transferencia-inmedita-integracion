@@ -24,8 +24,6 @@ public class ConsultaCuentaAV2Controller {
 	@Autowired
 	private ConsultaCuentaService consultaCuentaService;
 	
-
-	
 	@PostMapping(value = "/AV2")
 	public ResponseEntity<ConsultaCuentaAV3ResponseDto> getWsBTConsultaCuentaAV2(@RequestBody ConsultaCuentaSoapAV2Request request) throws Exception {
 		logger.info("Inicio -  getWsBTConsultaCuentaAV2 - consulta cuenta av2");
