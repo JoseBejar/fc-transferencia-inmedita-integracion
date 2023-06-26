@@ -75,10 +75,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!--configuration>
+				<configuration>
             		<mainClass>org.fmbbva.movcli.fc.transferencia.inmediata.FcTransferenciaInmediataIntegracionApplication</mainClass>
             		<layout>JAR</layout>
-        		</configuration-->
+        		</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.cxf</groupId>

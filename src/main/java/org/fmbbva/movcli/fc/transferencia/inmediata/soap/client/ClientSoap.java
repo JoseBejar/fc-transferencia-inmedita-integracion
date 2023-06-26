@@ -28,9 +28,11 @@ public class ClientSoap extends WebServiceGatewaySupport {
 		
 		try {
 			response = port.execute(request);
+			log.info("Obteniendo respuesta del servicio  SOAP RECEPCIONTIN");
 
 		} catch (Exception e) {
 			log.error("Error obtener el servicio de Recepcion  : "  + e.getMessage());
+			log.info("Error obtener el servicio de Recepcion");
 		}
 		return response;
 	}
