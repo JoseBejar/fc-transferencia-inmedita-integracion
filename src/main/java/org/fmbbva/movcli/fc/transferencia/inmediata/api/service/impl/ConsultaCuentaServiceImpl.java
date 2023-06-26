@@ -48,11 +48,12 @@ public class ConsultaCuentaServiceImpl implements ConsultaCuentaService{
 
 	@Override
 	public ConsultaCuentaAV3ResponseDto getConsultaCuentaSoapAV2(ConsultaCuentaSoapAV2Request consultaCuentaSoapAV2Request){
-		logger.info("Inicio getConsultaCuentaSoapAV2 de Consulta  Soap AV2");
+		logger.info("Inicio - getConsultaCuentaSoapAV2 - Consulta service AV2");
 
 			ConsultaCuentaAV3ResponseDto response = null;
 			try {
 				response = clienteSoapService.getConsultaCuentaSoapAV2(consultaCuentaSoapAV2Request);
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 				logger.error(" Ocurrió un error getConsultaCuentaSoapAV2 en la invocacion del servicoio Soap");
