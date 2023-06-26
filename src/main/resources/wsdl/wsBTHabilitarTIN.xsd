@@ -1,0 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8" ?> 
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SOAP-ENV:Body>
+<wsBTHabilitarTIN.ExecuteResponse xmlns="http://tempuri.org/action/">
+<SOAP-ENV:Fault>
+  <faultcode>SOAP-ENV:Client</faultcode> 
+  <faultstring>No SOAP request found. Call https://btdes.cnpdes.local:9443/desarrollo/servlet/com.dlya.bantotal.awsbthabilitartin?wsdl to get the WSDL.</faultstring> 
+  <detail>-20000</detail> 
+  </SOAP-ENV:Fault>
+  </wsBTHabilitarTIN.ExecuteResponse>
+  </SOAP-ENV:Body>
+  </SOAP-ENV:Envelope>

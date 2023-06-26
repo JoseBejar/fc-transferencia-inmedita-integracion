@@ -24,7 +24,7 @@ public class OrdenTransferenciaCT5Controller {
 	@Autowired
 	public OrdenTransferenciaService ordenTransferenciaService;
 	
-	@PostMapping(value = "/soap/CT5")
+	@PostMapping(value = "/CT5")
 	public ResponseEntity<OrdenTransferenciaCT5ResponseDto> getWsBTOrdenTransferenciaCT5(@RequestBody OrdenTransferenciaSoapCT5RequestDto request) throws Exception {
 		logger.info("Recibiendo Consulta del servicio SOAP CT5");
 		

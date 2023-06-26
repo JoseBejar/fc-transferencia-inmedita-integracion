@@ -26,7 +26,7 @@ public class ConsultaCuentaAV2Controller {
 	
 
 	
-	@PostMapping(value = "/soap/AV2")
+	@PostMapping(value = "/AV2")
 	public ResponseEntity<ConsultaCuentaAV3ResponseDto> getWsBTConsultaCuentaAV2(@RequestBody ConsultaCuentaSoapAV2Request request) throws Exception {
 		logger.info("Obteniendo Consulta del servicio SOAP AV2");
 		ConsultaCuentaAV3ResponseDto response = consultaCuentaService.getConsultaCuentaSoapAV2(request);

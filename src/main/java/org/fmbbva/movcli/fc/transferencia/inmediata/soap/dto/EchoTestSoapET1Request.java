@@ -18,8 +18,6 @@ public class EchoTestSoapET1Request {
 	private ET1 et1Dto;
 
 	public EchoTestSoapET1Request() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public EchoTestSoapET1Request(BTExtReqDto bTExtReqDto, int idcamara, ET1 et1Dto) {

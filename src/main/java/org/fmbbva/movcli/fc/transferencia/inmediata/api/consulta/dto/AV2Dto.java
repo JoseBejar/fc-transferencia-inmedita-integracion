@@ -318,7 +318,9 @@ public class AV2Dto {
 			sb.append("\"debtorTypeOfPerson\": \"" + getDebtorTypeOfPerson() + "\",");
 		    sb.append("\"currency\": \"" + getCurrency() + "\",");
 			sb.append("\"proxyValue\": \"" + getProxyValue() + "\",");
-		    sb.append("\"proxyType\": \"" + getProxyType() + "\"");
+		    sb.append("\"proxyType\": \"" + getProxyType() + "\",");
+		    sb.append("\"instructionId\": \"" + getInstructionId() + "\",");
+		    sb.append("\"branchId\": \"" + getBranchId() + "\"");
 		    sb.append("}");
 		    sb.append("}");
 		    return sb.toString();
