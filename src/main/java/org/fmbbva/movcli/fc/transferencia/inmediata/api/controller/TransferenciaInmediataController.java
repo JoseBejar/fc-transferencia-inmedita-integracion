@@ -70,7 +70,7 @@ public class TransferenciaInmediataController {
 	
 	
 	
-	@PostMapping(value = "/AV1")
+	@PostMapping(value = "/prueba/AV1")
 	public ResponseEntity<ConsultaCuentaAV4ResponseDto> getWsBTConsultaCuentaAV1(@RequestBody ConsultaCuentaAV1RequestDto request) {
 
 		
@@ -84,7 +84,7 @@ public class TransferenciaInmediataController {
 	}
 	
 	
-	@PostMapping(value = "/AV2")
+	@PostMapping(value = "/prueba/AV2")
 	public ResponseEntity<ConsultaCuentaAV3ResponseDto> getWsBTConsultaCuentaAV2(@RequestBody ConsultaCuentaAV2RequestDto request) {
 		logger.info("Recibiendo Consulta del servicio Av2");
 		ConsultaCuentaAV3ResponseDto response = consultaCuentaAV1Service.getConsultaCuentaAV2(request);
@@ -92,7 +92,7 @@ public class TransferenciaInmediataController {
 		
 	}
 	
-	@PostMapping(value = "/CT1")
+	@PostMapping(value = "/prueba/CT1")
 	public ResponseEntity<OrdenTransferenciaCT4ResponseDto> getWsBTOrdenTransferencia(@RequestBody OrdenTransferenciaCT1RequestDto request) {
 		logger.info("Recibiendo Orden de transferencia CT1");
 		OrdenTransferenciaCT4ResponseDto response = ordenTransferenciaService.getOrdenTransferenciaCT1(request);
@@ -101,7 +101,7 @@ public class TransferenciaInmediataController {
 	}
 	
 	
-	@PostMapping(value = "/CT2")
+	@PostMapping(value = "/prueba/CT2")
 	public ResponseEntity<OrdenTransferenciaCT3ResponseDto> getWsBTOrdenTransferencia(@RequestBody OrdenTransferenciaCT2RequestDto request) {
 		logger.info("Recibiendo Orden de transferencia CT2");
 		OrdenTransferenciaCT3ResponseDto response = ordenTransferenciaService.getOrdenTransferenciaCT2(request);
@@ -111,7 +111,7 @@ public class TransferenciaInmediataController {
 	
 	
 	
-	@PostMapping(value = "/CT5")
+	@PostMapping(value = "/prueba/CT5")
 	public ResponseEntity<OrdenTransferenciaCT5ResponseDto> getWsBTOrdenTransferenciaCT5(@RequestBody OrdenTransferenciaCT5RequestDto request) {
 		logger.info("Recibiendo Orden de transferencia CT5");
 		OrdenTransferenciaCT5ResponseDto response = ordenTransferenciaService.getOrdenTransferenciaCT5(request);
@@ -120,7 +120,7 @@ public class TransferenciaInmediataController {
 	}
 	
 
-	@PostMapping(value = "/CTC1")
+	@PostMapping(value = "/prueba/CTC1")
 	public ResponseEntity<CancelacionOrdenTransfCTC2ResponseDto> getOrdenCancelTransCTC1(@RequestBody CancelacionOrdenTransfCTC1RequestDto request) {
 		logger.info("Recibiendo cancelacion orden de transferencia CTC1");
 		CancelacionOrdenTransfCTC2ResponseDto response = cancelacionOrdenTransService.getCancelacionOrdenTransCTC1(request);
@@ -129,7 +129,7 @@ public class TransferenciaInmediataController {
 	}
 	
 	
-	@PostMapping(value = "/PSR1")
+	@PostMapping(value = "/prueba/PSR1")
 	public ResponseEntity<SolicitudEstadoPagoPSR2ResponsetDto> getSolicitudEstadoPagoRCT1(@RequestBody SolicitudEstadoPagoPSR1RequestDto request) {
 		logger.info("Recibiendo Solicitud de estado de pago PSR1");
 		SolicitudEstadoPagoPSR2ResponsetDto response = solicitudEstadoPagoService.getSolicitudEstadoPagoPSR1(request);
@@ -137,7 +137,7 @@ public class TransferenciaInmediataController {
 		
 	}
 	
-	@PostMapping(value = "/SIGNON1")
+	@PostMapping(value = "/prueba/SIGNON1")
 	public ResponseEntity<RespuestaSignOn2ResponseDto> getRespuestaSignOn1(@RequestBody RespuestaSignOn1RequestDto request) {
 		logger.info("Recibiendo respuesta signon1");
 		RespuestaSignOn2ResponseDto response = respuestaSignOnService.getRespuestaSignOn1(request);
@@ -145,14 +145,14 @@ public class TransferenciaInmediataController {
 		
 	}
 	
-	@PostMapping(value = "/SIGNOF1")
+	@PostMapping(value = "/prueba/SIGNOF1")
 	public ResponseEntity<RespuestaSignOf2ResponseDto> getRespuestaSignOf1(@RequestBody RespuestaSignOf1RequestDto request) {
 		logger.info("Recibiendo respuesta signof1");
 		RespuestaSignOf2ResponseDto response = respuestaSignOfService.getRespuestaSignOf1(request);
 		return new ResponseEntity<RespuestaSignOf2ResponseDto>(response, HttpStatus.CREATED);
 		
 	}
-	@PostMapping(value = "/ET1")
+	@PostMapping(value = "/prueba/ET1")
 	public ResponseEntity<EchoTestResponseET2Dto> getEchoTestRespuesta1(@RequestBody EchoTestRequestET1Dto request){
 		logger.info("Recibiendo respuesta echoTest et1");
 		EchoTestResponseET2Dto response = echoTestService.getEchoTest1(request);

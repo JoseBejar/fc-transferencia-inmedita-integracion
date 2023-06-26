@@ -1,7 +1,7 @@
 package org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto;
 
 public class AV3 {
-	
+
 	public String debtorParticipantCode;
     public String creditorParticipantCode;
     public String creationDate;
@@ -20,12 +20,13 @@ public class AV3 {
     public String channel;
     public String instructionId;
     public String responseCode;
-    public String reasonCode;
+	public String creditorName;
     public String creditorAddressLine;
+	public String creditorId;
     public String creditorPhoneNumber;
     public String creditorMobileNumber;
     public String creditorCCI;
-    public String creditorCreditCard;
+	public String sameCustomerFlag;
     public String proxyValue;
     public String proxyType;
     public String currency;
@@ -34,13 +35,13 @@ public class AV3 {
 		super();
 	}
 
-	public AV3(String debtorParticipantCode, String creditorParticipantCode, String creationDate,
-			String creationTime, String terminalId, String retrievalReferenceNumber, String trace, String branchId,
-			String debtorName, String debtorId, String debtorIdCode, String debtorPhoneNumber, String debtorAddressLine,
+	public AV3(String debtorParticipantCode, String creditorParticipantCode, String creationDate, String creationTime,
+			String terminalId, String retrievalReferenceNumber, String trace, String branchId, String debtorName,
+			String debtorId, String debtorIdCode, String debtorPhoneNumber, String debtorAddressLine,
 			String debtorMobileNumber, String transactionType, String channel, String instructionId,
-			String responseCode, String reasonCode, String creditorAddressLine, String creditorPhoneNumber,
-			String creditorMobileNumber, String creditorCCI, String creditorCreditCard, String proxyValue,
-			String proxyType, String currency) {
+			String responseCode, String creditorName, String creditorAddressLine, String creditorId,
+			String creditorPhoneNumber, String creditorMobileNumber, String creditorCCI, String sameCustomerFlag,
+			String proxyValue, String proxyType, String currency) {
 		super();
 		this.debtorParticipantCode = debtorParticipantCode;
 		this.creditorParticipantCode = creditorParticipantCode;
@@ -60,18 +61,18 @@ public class AV3 {
 		this.channel = channel;
 		this.instructionId = instructionId;
 		this.responseCode = responseCode;
-		this.reasonCode = reasonCode;
+		this.creditorName = creditorName;
 		this.creditorAddressLine = creditorAddressLine;
+		this.creditorId = creditorId;
 		this.creditorPhoneNumber = creditorPhoneNumber;
 		this.creditorMobileNumber = creditorMobileNumber;
 		this.creditorCCI = creditorCCI;
-		this.creditorCreditCard = creditorCreditCard;
+		this.sameCustomerFlag = sameCustomerFlag;
 		this.proxyValue = proxyValue;
 		this.proxyType = proxyType;
 		this.currency = currency;
 	}
 
-	
 	public String getDebtorParticipantCode() {
 		return debtorParticipantCode;
 	}
@@ -216,12 +217,12 @@ public class AV3 {
 		this.responseCode = responseCode;
 	}
 
-	public String getReasonCode() {
-		return reasonCode;
+	public String getCreditorName() {
+		return creditorName;
 	}
 
-	public void setReasonCode(String reasonCode) {
-		this.reasonCode = reasonCode;
+	public void setCreditorName(String creditorName) {
+		this.creditorName = creditorName;
 	}
 
 	public String getCreditorAddressLine() {
@@ -230,6 +231,14 @@ public class AV3 {
 
 	public void setCreditorAddressLine(String creditorAddressLine) {
 		this.creditorAddressLine = creditorAddressLine;
+	}
+
+	public String getCreditorId() {
+		return creditorId;
+	}
+
+	public void setCreditorId(String creditorId) {
+		this.creditorId = creditorId;
 	}
 
 	public String getCreditorPhoneNumber() {
@@ -256,12 +265,12 @@ public class AV3 {
 		this.creditorCCI = creditorCCI;
 	}
 
-	public String getCreditorCreditCard() {
-		return creditorCreditCard;
+	public String getSameCustomerFlag() {
+		return sameCustomerFlag;
 	}
 
-	public void setCreditorCreditCard(String creditorCreditCard) {
-		this.creditorCreditCard = creditorCreditCard;
+	public void setSameCustomerFlag(String sameCustomerFlag) {
+		this.sameCustomerFlag = sameCustomerFlag;
 	}
 
 	public String getProxyValue() {
@@ -287,5 +296,4 @@ public class AV3 {
 	public void setCurrency(String currency) {
 		this.currency = currency;
 	}
-
 }

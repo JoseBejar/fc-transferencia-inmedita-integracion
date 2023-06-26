@@ -30,19 +30,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link WsBTHabilitarTINExecute }
+     * Create an instance of {@link WsBTRecepcionTINExecute }
      * 
      */
-    public WsBTHabilitarTINExecute createWsBTHabilitarTINExecute() {
-        return new WsBTHabilitarTINExecute();
+    public WsBTRecepcionTINExecute createWsBTRecepcionTINExecute() {
+        return new WsBTRecepcionTINExecute();
     }
 
     /**
-     * Create an instance of {@link WsBTHabilitarTINExecuteResponse }
+     * Create an instance of {@link WsBTRecepcionTINExecuteResponse }
      * 
      */
-    public WsBTHabilitarTINExecuteResponse createWsBTHabilitarTINExecuteResponse() {
-        return new WsBTHabilitarTINExecuteResponse();
+    public WsBTRecepcionTINExecuteResponse createWsBTRecepcionTINExecuteResponse() {
+        return new WsBTRecepcionTINExecuteResponse();
     }
 
 }

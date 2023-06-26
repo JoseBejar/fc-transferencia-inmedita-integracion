@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<definitions name="wsBTRecepcionTIN" targetNamespace="http://tempuri.org/action/" xmlns:tns="http://tempuri.org/action/" xmlns:wsdlns="http://tempuri.org/action/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns1="http://uy.com.dlya.bantotal/BTService/" xmlns:tns2="BTWorkFlow_Gx80">
+<types>
+<schema targetNamespace="http://uy.com.dlya.bantotal/BTService/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+  <import namespace="BTWorkFlow_Gx80" /> 
+<complexType name="BTExtReq">
+<all>
+  <element name="Canal" type="xsd:string" /> 
+  <element name="Requerimiento" type="xsd:string" /> 
+  <element name="Usuario" type="xsd:string" /> 
+  <element name="Token" type="xsd:string" /> 
+  </all>
+  </complexType>
+<complexType name="BTErroresNegocio">
+<sequence>
+  <element minOccurs="0" maxOccurs="unbounded" name="BTErrorNegocio" type="tns1:BTErrorNegocio" /> 
+  </sequence>
+  </complexType>
+<complexType name="BTErrorNegocio">
+<all>
+  <element name="Codigo" type="xsd:int" /> 
+  <element name="Descripcion" type="xsd:string" /> 
+  <element name="Severidad" type="xsd:string" /> 
+  </all>
+  </complexType>
+  </schema>
+<schema targetNamespace="http://tempuri.org/action/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" elementFormDefault="qualified">
+  <import namespace="http://uy.com.dlya.bantotal/BTService/" /> 
+  <import namespace="BTWorkFlow_Gx80" /> 
+<element name="wsBTRecepcionTIN.Execute">
+<complexType>
+<sequence>
+  <element minOccurs="1" maxOccurs="1" name="Extreq" type="tns1:BTExtReq" /> 
+  <element minOccurs="1" maxOccurs="1" name="Mpe005idc" type="xsd:short" /> 
+  <element minOccurs="1" maxOccurs="1" name="Payload" type="xsd:string" /> 
+  </sequence>
+  </complexType>
+  </element>
+<element name="wsBTRecepcionTIN.ExecuteResponse">
+<complexType>
+<sequence>
+  <element minOccurs="1" maxOccurs="1" name="Extreq" type="tns1:BTExtReq" /> 
+  <element minOccurs="1" maxOccurs="1" name="Payload" type="xsd:string" /> 
+  <element minOccurs="1" maxOccurs="1" name="Erroresnegocio" type="tns1:BTErroresNegocio" /> 
+  </sequence>
+  </complexType>
+  </element>
+  </schema>
+  </types>
+<message name="wsBTRecepcionTIN.ExecuteSoapIn">
+  <part name="parameters" element="tns:wsBTRecepcionTIN.Execute" /> 
+  </message>
+<message name="wsBTRecepcionTIN.ExecuteSoapOut">
+  <part name="parameters" element="tns:wsBTRecepcionTIN.ExecuteResponse" /> 
+  </message>
+<portType name="wsBTRecepcionTINSoapPort">
+<operation name="Execute">
+  <input message="wsdlns:wsBTRecepcionTIN.ExecuteSoapIn" /> 
+  <output message="wsdlns:wsBTRecepcionTIN.ExecuteSoapOut" /> 
+  </operation>
+  </portType>
+<binding name="wsBTRecepcionTINSoapBinding" type="wsdlns:wsBTRecepcionTINSoapPort">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+<operation name="Execute">
+  <soap:operation soapAction="http://tempuri.org/action/action/AWSBTRECEPCIONTIN.Execute" /> 
+<input>
+  <soap:body use="literal" /> 
+  </input>
+<output>
+  <soap:body use="literal" /> 
+  </output>
+  </operation>
+  </binding>
+<service name="wsBTRecepcionTIN">
+<port name="wsBTRecepcionTINSoapPort" binding="wsdlns:wsBTRecepcionTINSoapBinding">
+  <soap:address location="https://btdes.cnpdes.local:9443/desarrollo/servlet/com.dlya.bantotal.awsbtrecepciontin" /> 
+  </port>
+  </service>
+  </definitions>

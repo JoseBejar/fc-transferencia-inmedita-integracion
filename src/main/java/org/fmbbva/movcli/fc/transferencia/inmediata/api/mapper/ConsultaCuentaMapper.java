@@ -74,12 +74,10 @@ public class ConsultaCuentaMapper {
 		aV3Dto.setChannel(request.getAv2Dto().getChannel());
 		aV3Dto.setInstructionId(request.getAv2Dto().getInstructionId());
 		aV3Dto.setResponseCode(null);
-		aV3Dto.setReasonCode(null);
 		aV3Dto.setCreditorAddressLine(request.getAv2Dto().getCreditorAddressLine());
 		aV3Dto.setCreditorPhoneNumber(request.getAv2Dto().getCreditorPhoneNumber());
 		aV3Dto.setCreditorMobileNumber(request.getAv2Dto().getCreditorMobileNumber());
 		aV3Dto.setCreditorCCI(request.getAv2Dto().getCreditorCCI());
-		aV3Dto.setCreditorCreditCard(request.getAv2Dto().getCreditorCreditCard());
 		aV3Dto.setCurrency(request.getAv2Dto().getCurrency());
 		aV3Dto.setProxyValue(request.getAv2Dto().getProxyValue());
 		aV3Dto.setProxyType(request.getAv2Dto().getProxyType());
