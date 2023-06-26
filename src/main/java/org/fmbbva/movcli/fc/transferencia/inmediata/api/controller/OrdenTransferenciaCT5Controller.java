@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrdenTransferenciaCT5Controller {
 	
 
-	private static final Logger  logger= Logger.getLogger(OrdenTransferenciaCT2Controller.class);
+	private static final Logger  logger= Logger.getLogger(OrdenTransferenciaCT5Controller.class);
 
 	@Autowired
 	public OrdenTransferenciaService ordenTransferenciaService;

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/ssv2/payment-api/v3.5.0")
 public class OrdenTransferenciaCT1Controller {
 
-	private static final Logger  logger= Logger.getLogger(OrdenTransferenciaCT2Controller.class);
+	private static final Logger  logger= Logger.getLogger(OrdenTransferenciaCT1Controller.class);
 
 	@Autowired
 	public OrdenTransferenciaService ordenTransferenciaService;
