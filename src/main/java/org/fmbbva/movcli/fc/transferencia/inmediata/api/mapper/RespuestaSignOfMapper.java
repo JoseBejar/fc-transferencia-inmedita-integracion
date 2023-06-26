@@ -13,8 +13,10 @@ import org.springframework.stereotype.Service;
 public class RespuestaSignOfMapper {
 	
 	private static final Logger  logger= Logger.getLogger(RespuestaSignOfMapper.class);
+	
 	public RespuestaSignOf2ResponseDto getRespuestaSignOf1(RespuestaSignOf1RequestDto request){
-		logger.info("Respuesta SignOf2 Mapper");
+		logger.info("Ingresando  al mappeo de atributos en getRespuestaSignOf1 SIGNOF1 ");
+
 		 
 		RespuestaSignOf2ResponseDto respuestaSignOf2ResponseDto = new RespuestaSignOf2ResponseDto();
 		
@@ -26,6 +28,8 @@ public class RespuestaSignOfMapper {
 		signOF2Dto.setReasonCode(null);
 		signOF2Dto.setTrace(request.getSignOF1Dto().getTrace());
 		respuestaSignOf2ResponseDto.setSignOF2Dto(signOF2Dto);
+		logger.info("Fin del mappeo de atributos en getRespuestaSignOf1 SIGNOF1 ");
+
 		return respuestaSignOf2ResponseDto;
 	
 	

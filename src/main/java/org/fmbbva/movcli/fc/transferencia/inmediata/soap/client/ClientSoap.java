@@ -20,7 +20,7 @@ public class ClientSoap extends WebServiceGatewaySupport {
 
 	public WsBTRecepcionTINExecuteResponse getWsBTRecepcionTIN(WsBTRecepcionTINExecute request) {
 		
-		log.info("Obteniendo el servicio  SOAP RECEPCIONTIN");
+		log.info("Ingresando al servicio de Recepcion getWsBTRecepcionTIN");
 		WsBTRecepcionTINExecuteResponse response = new WsBTRecepcionTINExecuteResponse();
 				
 		WsBTRecepcionTIN service = new WsBTRecepcionTIN();
@@ -30,8 +30,10 @@ public class ClientSoap extends WebServiceGatewaySupport {
 			response = port.execute(request);
 
 		} catch (Exception e) {
-			log.error("Error obtener el servicio de Recepcion  : "  + e.getMessage());
+			log.error("Error al obtener el servicio de Recepcion  : "  + e.getMessage());
 		}
+		
+		log.info("Fin del servicio de Recepcion getWsBTRecepcionTIN");
 		return response;
 	}
 	

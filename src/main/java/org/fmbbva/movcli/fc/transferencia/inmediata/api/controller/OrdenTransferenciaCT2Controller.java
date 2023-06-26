@@ -26,8 +26,10 @@ public class OrdenTransferenciaCT2Controller {
 	
 	@PostMapping(value = "/CT2")
 	public ResponseEntity<OrdenTransferenciaCT3ResponseDto> getWsBTOrdenTransferenciaCT2(@RequestBody OrdenTransferenciaSoapCT2RequestDto request) throws Exception {
-		logger.info("Recibiendo Consulta del servicio SOAP CT3");
+		logger.info("Inicio Consulta del servicio SOAP CT2 en getWsBTOrdenTransferenciaCT2");
+
 		OrdenTransferenciaCT3ResponseDto response = ordenTransferenciaService.getOrdenTransferenciaSOAPCT2(request);
+		logger.info("Fin Consulta del servicio SOAP CT2 en getWsBTOrdenTransferenciaCT2");
 		return new ResponseEntity<>(response, HttpStatus.CREATED);
 		
 	}

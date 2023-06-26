@@ -32,7 +32,7 @@ public class ClienteSoapMapper {
 	private static final Logger log = LogManager.getLogger(ClienteSoapMapper.class); 	
 
 	public WsBTRecepcionTINExecute getAV2SoapMapper(ConsultaCuentaSoapAV2Request request) {
-		log.info("Setteando atributos AV2 MAPPER");
+		log.info("Ingresando  al mappeo de atributos en getAV2SoapMapper ");
 		WsBTRecepcionTINExecute wsBTRecepcionTIN = new WsBTRecepcionTINExecute();
 		BTExtReq bTExtReq = new BTExtReq();
 		bTExtReq.setCanal(request.getbTExtReqDto().getCanal());
@@ -42,25 +42,30 @@ public class ClienteSoapMapper {
 		wsBTRecepcionTIN.setExtreq(bTExtReq);
 		wsBTRecepcionTIN.setMpe005Idc((short)request.getMpe005idc());
 		wsBTRecepcionTIN.setPayload(request.getAv2Dto().buildJSON());
+		
+		log.info("Fin del mappeo  de atributos en getAV2SoapMapper ");
 		return wsBTRecepcionTIN;
 		}
 	
 	public ConsultaCuentaAV3ResponseDto getAV3SoapMapper(WsBTRecepcionTINExecuteResponse request) {
-		log.info("Convirtiendo atributos AV3 MAPPER");
+		log.info("Iniciando conversion  de datos a Json getAV3SoapMapper");
 		ConsultaCuentaAV3ResponseDto response = new ConsultaCuentaAV3ResponseDto();
 		try {
 			response =  new ObjectMapper().readValue(request.getPayload(), ConsultaCuentaAV3ResponseDto.class);
 		} catch (JsonMappingException e) {
+			log.error("Erorr no se pudo realizar la conversión getAV3SoapMapper");
 			e.printStackTrace();
 		} catch (JsonProcessingException e) {
-
+			log.error("Erorr no se pudo realizar la conversión getAV3SoapMapper");
 			e.printStackTrace();
+			
 		}
+		log.info("Fin de  conversion  de datos a Json getAV3SoapMapper ");
 		return response;
 	}
 	
 	public WsBTRecepcionTINExecute getCT2SoapMapper(OrdenTransferenciaSoapCT2RequestDto request) {
-		log.info("Setteando atributos Orden Transferencia CT2");
+		log.info("Ingresando  al mappeo de atributos en getCT2SoapMapper ");
 		WsBTRecepcionTINExecute wsBTRecepcionTIN = new WsBTRecepcionTINExecute();
 		BTExtReq bTExtReq = new BTExtReq();
 		bTExtReq.setCanal(request.getbTExtReqDto().getCanal());
@@ -70,25 +75,33 @@ public class ClienteSoapMapper {
 		wsBTRecepcionTIN.setExtreq(bTExtReq);
 		wsBTRecepcionTIN.setMpe005Idc((short) request.getMpe005idc());
 		wsBTRecepcionTIN.setPayload(request.getCt2Dto().buildJSON());
+		log.info("Fin del mappeo  de atributos en getCT2SoapMapper ");
+
 		return wsBTRecepcionTIN;
 	}
 	
 	public OrdenTransferenciaCT3ResponseDto getCT3SoapMapper(WsBTRecepcionTINExecuteResponse request) {
-		log.info("convirtiendo atributos Orden Transferencia CT3");
+		log.info("Iniciando conversion  de datos a Json getCT3SoapMapper ");
 		OrdenTransferenciaCT3ResponseDto response = new OrdenTransferenciaCT3ResponseDto();
 		try {
 			response = new ObjectMapper().readValue(request.getPayload(), OrdenTransferenciaCT3ResponseDto.class);
 		} catch (JsonMappingException e) {
+			log.error("Erorr no se pudo realizar la conversión getCT3SoapMapper");
+
 			e.printStackTrace();
 		}catch (JsonProcessingException e) {
+			log.error("Erorr no se pudo realizar la conversión getCT3SoapMapper");
+
 			e.printStackTrace();
 		}
 		
+		log.info("Fin de  conversion  de datos a Json getCT3SoapMapper ");
 		return response;
 	}
 	
 	public WsBTRecepcionTINExecute getCT1SoapMapper(OrdenTransferenciaSoapCT1RequestDto request) {
-		log.info("Setteando atributos Orden Transferencia CT1");
+		log.info("Ingresando  al mappeo de atributos en getCT1SoapMapper ");
+
 		WsBTRecepcionTINExecute wsBTRecepcionTIN = new WsBTRecepcionTINExecute();
 		BTExtReq bTExtReq = new BTExtReq();
 		bTExtReq.setCanal(request.getbTExtReqDto().getCanal());
@@ -98,29 +111,36 @@ public class ClienteSoapMapper {
 		wsBTRecepcionTIN.setExtreq(bTExtReq);
 		wsBTRecepcionTIN.setMpe005Idc((short) request.getMpe005idc());
 		wsBTRecepcionTIN.setPayload(request.getCt1Dto().buildJSON());
+		log.info("Fin del mappeo  de atributos en getCT1SoapMapper ");
+
 		return wsBTRecepcionTIN;
 	}
 	
 	public OrdenTransferenciaCT4ResponseDto getCT4SoapMapper(WsBTRecepcionTINExecuteResponse request) {
-		log.info("Setteando atributos Orden Transferencia CT4");
+		log.info("Iniciando conversion  de datos a Json getCT4SoapMapper");
 		
 		OrdenTransferenciaCT4ResponseDto response = new OrdenTransferenciaCT4ResponseDto();
 		
 		try {
 			response  = new ObjectMapper().readValue(request.getPayload(), OrdenTransferenciaCT4ResponseDto.class);
 		} catch (JsonMappingException e) {
+			log.error("Erorr no se pudo realizar la conversión getCT4SoapMapper");
 			e.printStackTrace();
+			
 
-		}catch (JsonProcessingException e) {	
+		}catch (JsonProcessingException e) {
+			log.error("Erorr no se pudo realizar la conversión getCT4SoapMapper");
 			e.printStackTrace();
 		}
 		
+		log.info("Fin de  conversion  de datos a Json getCT4SoapMapper ");
 		return response;
 
 	}
 	
 	public WsBTRecepcionTINExecute getCT5SoapMapper(OrdenTransferenciaSoapCT5RequestDto request) {
-		log.info("Setteando atributos Orden Transferencia CT5");
+		log.info("Ingresando  al mappeo de atributos en getCT5SoapMapper ");
+		
 		WsBTRecepcionTINExecute wsBTRecepcionTIN = new WsBTRecepcionTINExecute();
 		BTExtReq bTExtReq = new BTExtReq();
 		bTExtReq.setCanal(request.getbTExtReqDto().getCanal());
@@ -130,19 +150,27 @@ public class ClienteSoapMapper {
 		wsBTRecepcionTIN.setExtreq(bTExtReq);
 		wsBTRecepcionTIN.setMpe005Idc((short) request.getMpe005idc());
 		wsBTRecepcionTIN.setPayload(request.getCt5Dto().buildJSON());
+		
+		log.info("Fin  del mappeo de atributos en getCT5SoapMapper ");
+		
 		return wsBTRecepcionTIN;
 	}
 	public OrdenTransferenciaCT5ResponseDto getCT5ResponseSoapMappper(WsBTRecepcionTINExecuteResponse request) {
-		log.info("Setteando atributos Orden Transferencia CT4");
+		log.info("Iniciando conversion  de datos a Json getCT5ResponseSoapMappper");
+
 
 		OrdenTransferenciaCT5ResponseDto response = new OrdenTransferenciaCT5ResponseDto();
 		try {
 			response  = new ObjectMapper().readValue(request.getPayload(), OrdenTransferenciaCT5ResponseDto.class);
 		} catch (JsonMappingException e) {
+			log.error("Erorr no se pudo realizar la conversión getCT5ResponseSoapMappper");
 			e.printStackTrace();
 		}catch (JsonProcessingException e) {
+			log.error("Erorr no se pudo realizar la conversión getCT5ResponseSoapMappper");
 			e.printStackTrace();
 		}
+		log.info("Fin de  conversion  de datos a Json getCT5ResponseSoapMappper");
+		
 		return response;
 	}
 }

@@ -26,8 +26,9 @@ public class CancelacionOrdenTransferenciaServiceImpl implements CancelacionOrde
 	@Override
 	public CancelacionOrdenTransfCTC2ResponseDto getCancelacionOrdenTransCTC1(
 			CancelacionOrdenTransfCTC1RequestDto cancelacionOrdenTransfCTC1RequestDto) {
-		logger.info("Orden Cancelacion Transferencia CTC2");
+		logger.info("Ingresando al servicio Orden Cancelacion Transferencia CTC2");
 		CancelacionOrdenTransfCTC2ResponseDto response = ordenCancelacionTransferenciaMapper.getCancelacionOrdenCTC1(cancelacionOrdenTransfCTC1RequestDto);
+		logger.info("Fin del servicio Orden Cancelacion Transferencia CTC2");
 		return response;
 	}
 	
