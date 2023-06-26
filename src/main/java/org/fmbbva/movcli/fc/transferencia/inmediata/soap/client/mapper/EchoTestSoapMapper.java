@@ -28,7 +28,9 @@ public class EchoTestSoapMapper {
 	private static final Logger log = LogManager.getLogger(EchoTestSoapMapper.class); 	
 
 	public WsBTHabilitarTINExecute getET1SoapMapper(EchoTestSoapET1Request request) {
-			log.info("Mappeando atributos ET1 ");
+			
+			log.info("Ingresando  al mappeo de atributos en getET1SoapMapper ");
+
 			WsBTHabilitarTINExecute wsBTHabilitarTINExecute = new WsBTHabilitarTINExecute();
 			BTExtReq btExtReq = new BTExtReq();
 			btExtReq.setCanal(request.getbTExtReqDto().getCanal());
@@ -38,21 +40,27 @@ public class EchoTestSoapMapper {
 			wsBTHabilitarTINExecute.setExtreq(btExtReq);
 			wsBTHabilitarTINExecute.setIdcamara((short) request.getIdcamara());
 			wsBTHabilitarTINExecute.setPayload(request.getEt1Dto().buildJSON());
+			log.info("Fin del mappeo de atributos en getET1SoapMapper ");
+
 			return wsBTHabilitarTINExecute;
 		
 	}
 	public EchoTestResponseET2Dto getET2SoapMapper(WsBTHabilitarTINExecuteResponse request) {
 		
-		log.info("Convirtiendo atributos ET2 MAPPER");
+		log.info("Iniciando conversión de datos getET2SoapMapper");
 		EchoTestResponseET2Dto response = new EchoTestResponseET2Dto();
 		
 		try {
 			response = new ObjectMapper().readValue(request.getPayload(), EchoTestResponseET2Dto.class);
 		} catch (JsonMappingException e) {
+			log.error("Error en la conversión de datos getET2SoapMapper ");
 			e.printStackTrace();
 		}catch (JsonProcessingException e) {
+			log.error("Error conversión de datos getET2SoapMapper ");
 			e.printStackTrace();
 		}
+		log.info("Fin conversión de datos getET2SoapMapper ");
+
 		return response;
 	}
 

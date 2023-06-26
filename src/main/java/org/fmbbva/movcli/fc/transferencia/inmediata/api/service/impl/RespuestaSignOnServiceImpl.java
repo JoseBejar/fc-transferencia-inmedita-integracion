@@ -21,8 +21,10 @@ public class RespuestaSignOnServiceImpl implements RespuestaSignOnService{
 	
 	@Override
 	public RespuestaSignOn2ResponseDto getRespuestaSignOn1(RespuestaSignOn1RequestDto respuestaSignOn1RequestDto) {
-		logger.info("Respuesta SignOn2 service Implement");
+		logger.info("Ingresando al servicio respuesta SignOn1 getRespuestaSignOn1");
 		RespuestaSignOn2ResponseDto response =  respuestaSignOn1Mapper.getRespuestaSignOn1(respuestaSignOn1RequestDto);
+		logger.info("Fin del servicio respuesta SignOn1 getRespuestaSignOn1");
+
 		return response;
 	}
 

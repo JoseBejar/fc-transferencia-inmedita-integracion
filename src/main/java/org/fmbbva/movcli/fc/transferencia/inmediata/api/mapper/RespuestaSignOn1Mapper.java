@@ -14,7 +14,8 @@ public class RespuestaSignOn1Mapper {
 	private static final Logger  logger= Logger.getLogger(RespuestaSignOn1Mapper.class);
 
 	public RespuestaSignOn2ResponseDto getRespuestaSignOn1(RespuestaSignOn1RequestDto request){
-		logger.info("Respuesta SignOn2 Mapper");
+		logger.info("Ingresando  al mappeo de atributos en getRespuestaSignOn1 SIGNON1 ");
+
 		 
 		RespuestaSignOn2ResponseDto respuestaSignOn2ResponseDto = new RespuestaSignOn2ResponseDto();
 		
@@ -26,6 +27,9 @@ public class RespuestaSignOn1Mapper {
 		signON2Dto.setReasonCode(null);
 		signON2Dto.setTrace(request.getSignON1Dto().getTrace());
 		respuestaSignOn2ResponseDto.setSignON2Dto(signON2Dto);
+		
+		logger.info("Fin del mappeo de atributos en getRespuestaSignOn1 SIGNON1 ");
+
 		return respuestaSignOn2ResponseDto;
 		
 		

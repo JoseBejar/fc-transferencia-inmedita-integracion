@@ -19,7 +19,8 @@ public class OrdenTransferenciaMapper {
 
 	public OrdenTransferenciaCT4ResponseDto getOrdenTransferenciaCT1Mapper(OrdenTransferenciaCT1RequestDto request) {
 		
-		logger.info("Orden Transferencia CT4 Mapper");
+		logger.info("Ingresando  al mappeo de atributos en getOrdenTransferenciaCT1Mapper CT1 ");
+
 		OrdenTransferenciaCT4ResponseDto ordenTransferenciaCT4ResponseDto = new OrdenTransferenciaCT4ResponseDto();
 		CT4Dto ct4Dto = new CT4Dto();
 		ct4Dto.setDebtorParticipantCode(request.getCt1Dto().getDebtorParticipantCode());
@@ -47,11 +48,14 @@ public class OrdenTransferenciaMapper {
 		ct4Dto.setChannel(request.getCt1Dto().getChannel());
 		ct4Dto.setInterbankSettlementAmount(null);
 		ordenTransferenciaCT4ResponseDto.setCt4Dto(ct4Dto);
+		logger.info("Fin  al mappeo de atributos en getOrdenTransferenciaCT1Mapper CT1 ");
+
 		return ordenTransferenciaCT4ResponseDto;
 	}
 	
 	public OrdenTransferenciaCT3ResponseDto getOrdenTransferenciaCT2Mapper(OrdenTransferenciaCT2RequestDto request) {
-		logger.info("Orden Transferencia CT3 Mapper");
+		logger.info("Ingresando  al mappeo de atributos en getOrdenTransferenciaCT2Mapper CT2 ");
+
 		OrdenTransferenciaCT3ResponseDto ordenTransferenciaCT3ResponseDto = new OrdenTransferenciaCT3ResponseDto();
 		CT3Dto ct3Dto = new CT3Dto();
 		ct3Dto.setDebtorParticipantCode(request.getCt2Dto().getDebtorParticipantCode());
@@ -76,11 +80,14 @@ public class OrdenTransferenciaMapper {
 		ct3Dto.setBranchId(request.getCt2Dto().getBranchId());
 		ct3Dto.setInstructionId(request.getCt2Dto().getInstructionId());
 		ordenTransferenciaCT3ResponseDto.setCt3Dto(ct3Dto);
+		logger.info("Fin  al mappeo de atributos en getOrdenTransferenciaCT2Mapper CT2 ");
+
 		return ordenTransferenciaCT3ResponseDto;
 	}
 	
 	public OrdenTransferenciaCT5ResponseDto getOrdenTransferenciaCT5Mapper(OrdenTransferenciaCT5RequestDto request) {
-		logger.info("Orden Transferencia CT5 Mapper");
+		logger.info("Ingresando al mappeo de atributos en getOrdenTransferenciaCT5Mapper CT5 ");
+
 		OrdenTransferenciaCT5ResponseDto ordenTransferenciaCT5ResponseDto = new OrdenTransferenciaCT5ResponseDto();
 		CT5Dto ct5Dto = new CT5Dto();
 		ct5Dto.setDebtorParticipantCode(request.getCt5dto().getDebtorParticipantCode());
@@ -106,6 +113,8 @@ public class OrdenTransferenciaMapper {
 		ct5Dto.setChannel(request.getCt5dto().getChannel());
 		ct5Dto.setInterbankSettlementAmount(request.getCt5dto().getInterbankSettlementAmount());
 		ordenTransferenciaCT5ResponseDto.setCt5dto(ct5Dto);
+		logger.info("Fin del mappeo de atributos en getOrdenTransferenciaCT5Mapper CT5 ");
+
 		return ordenTransferenciaCT5ResponseDto;
 		
 			

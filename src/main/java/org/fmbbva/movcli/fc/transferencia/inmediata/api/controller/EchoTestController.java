@@ -24,8 +24,10 @@ public class EchoTestController {
 	
 	@PostMapping(value = "/ET1")
 	public ResponseEntity<EchoTestResponseET2Dto> getWsEchoTestET1(@RequestBody EchoTestSoapET1Request request) throws Exception {
-		logger.info("Recibiendo Consulta del servicio SOAP ECHO TEST");
+		logger.info("Inicio Consulta del servicio SOAP ECHO TEST  en getWsEchoTestET1");
 		EchoTestResponseET2Dto response = echoTestService.getEchoTestSoap1(request);
+		logger.info("Fin Consulta del servicio SOAP ECHO TEST getWsEchoTestET1");
+
 		return new ResponseEntity<>(response, HttpStatus.CREATED);
 		
 	}

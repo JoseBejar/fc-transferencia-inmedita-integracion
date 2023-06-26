@@ -19,16 +19,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrdenTransferenciaCT5Controller {
 	
 
-	private static final Logger  logger= Logger.getLogger(OrdenTransferenciaCT2Controller.class);
+	private static final Logger  logger= Logger.getLogger(OrdenTransferenciaCT5Controller.class);
 
 	@Autowired
 	public OrdenTransferenciaService ordenTransferenciaService;
 	
 	@PostMapping(value = "/CT5")
 	public ResponseEntity<OrdenTransferenciaCT5ResponseDto> getWsBTOrdenTransferenciaCT5(@RequestBody OrdenTransferenciaSoapCT5RequestDto request) throws Exception {
-		logger.info("Recibiendo Consulta del servicio SOAP CT5");
+		logger.info("Inicio Consulta del servicio SOAP CT5 en getWsBTOrdenTransferenciaCT5");
+
 		
 		OrdenTransferenciaCT5ResponseDto response = ordenTransferenciaService.getOrdenTransferenciaSOAPCT5(request);
+		logger.info("Fin Consulta del servicio SOAP CT5 en getWsBTOrdenTransferenciaCT5");
+
 		return new ResponseEntity<>(response, HttpStatus.CREATED);
 		
 	}

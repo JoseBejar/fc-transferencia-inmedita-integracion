@@ -23,8 +23,9 @@ public class SolicitudEstadoPagoServiceImpl implements SolicitudEstadoPagoServic
 	@Override
 	public SolicitudEstadoPagoPSR2ResponsetDto getSolicitudEstadoPagoPSR1(
 			SolicitudEstadoPagoPSR1RequestDto solicitudEstadoPagoPSR1RequestDto) {
-		logger.info("Solicitud Estado de Pago PSR2 service Implement");
+		logger.info("Ingresando al servicio Solicitud Estado de Pago PSR1 getSolicitudEstadoPagoPSR1");
 		SolicitudEstadoPagoPSR2ResponsetDto response =  solicitudEstadoPagoMapper.getSolicitudEstadoPagoPSR1(solicitudEstadoPagoPSR1RequestDto);
+		logger.info("Fin del servicio Solicitud Estado de Pago PSR1 getSolicitudEstadoPagoPSR1");
 
 		return  response;
 	}

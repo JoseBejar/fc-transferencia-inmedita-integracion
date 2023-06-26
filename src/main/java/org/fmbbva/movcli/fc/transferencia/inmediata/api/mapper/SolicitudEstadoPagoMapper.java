@@ -15,7 +15,9 @@ public class SolicitudEstadoPagoMapper {
 
 	public SolicitudEstadoPagoPSR2ResponsetDto getSolicitudEstadoPagoPSR1(SolicitudEstadoPagoPSR1RequestDto request)
 	{
-		logger.info("Solicitud Estado de Pago PSR2 Mapper");
+		
+		logger.info("Ingresando  al mappeo de atributos en getSolicitudEstadoPagoPSR1 PSR1 ");
+
 		SolicitudEstadoPagoPSR2ResponsetDto solicitudEstadoPagoPSR2ResponsetDto = new SolicitudEstadoPagoPSR2ResponsetDto();
 		
 		
@@ -42,6 +44,9 @@ public class SolicitudEstadoPagoMapper {
 		rctc2Dto.setInstructionId(request.getPsr1Dto().getInstructionId());
 		rctc2Dto.setInterbankSettlementAmount(null);
 		solicitudEstadoPagoPSR2ResponsetDto.setPsr2Dto(rctc2Dto);
+		
+		logger.info("Fin del mappeo de atributos en getSolicitudEstadoPagoPSR1 PSR1 ");
+
 		return solicitudEstadoPagoPSR2ResponsetDto;
 		
 	}

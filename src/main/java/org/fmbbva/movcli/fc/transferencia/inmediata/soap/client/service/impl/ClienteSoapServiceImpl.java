@@ -37,12 +37,13 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 
 	@Override
 	public ConsultaCuentaAV3ResponseDto getConsultaCuentaSoapAV2(ConsultaCuentaSoapAV2Request consultaCuentaSoapAV2Request) throws Exception {
-		log.info("Consulta Cuenta AV3 SOAP Implement");
+		log.info("Ingresando al servicio  Soap getConsultaCuentaSoapAV2 ");
 		
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute = clienteSoapMapper.getAV2SoapMapper(consultaCuentaSoapAV2Request);
 		WsBTRecepcionTINExecuteResponse response = clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);
 		ConsultaCuentaAV3ResponseDto responseAv3 = clienteSoapMapper.getAV3SoapMapper(response);
 		
+		log.info("Fin del  servicio  Soap getConsultaCuentaSoapAV2 ");
 		return responseAv3;
 	}
 
@@ -50,11 +51,12 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 	@Override
 	public OrdenTransferenciaCT3ResponseDto getOrdenTransferenciaSoapCT2(
 			OrdenTransferenciaSoapCT2RequestDto ordenTransferenciaSoapCT2RequestDto) throws Exception {
-		log.info("Orden Transferencia CT2 SOAP Implement");
+		log.info("Ingresando al servicio  Soap getOrdenTransferenciaSoapCT2 ");
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute = clienteSoapMapper.getCT2SoapMapper(ordenTransferenciaSoapCT2RequestDto);
 		WsBTRecepcionTINExecuteResponse response =clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);
 		
 		OrdenTransferenciaCT3ResponseDto responseCT3 = clienteSoapMapper.getCT3SoapMapper(response);
+		log.info("Fin del  servicio  Soap getOrdenTransferenciaSoapCT2");
 		return responseCT3;
 	}
 
@@ -63,11 +65,12 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 	public OrdenTransferenciaCT4ResponseDto getOrdenTransferenciaSoapCT1(
 			OrdenTransferenciaSoapCT1RequestDto ordenTransferenciaSoapCT1RequestDto) throws Exception {
 		
-		log.info("Orden Transferencia CT4 SOAP Implement");
+		log.info("Ingresando al servicio  Soap getOrdenTransferenciaSoapCT1 ");
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute = clienteSoapMapper.getCT1SoapMapper(ordenTransferenciaSoapCT1RequestDto);
 		WsBTRecepcionTINExecuteResponse response = clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);
 		
 		OrdenTransferenciaCT4ResponseDto responseCT4 = clienteSoapMapper.getCT4SoapMapper(response);
+		log.info("Fin del  servicio  Soap getOrdenTransferenciaSoapCT1");
 		return responseCT4;
 	}
 
@@ -75,10 +78,14 @@ public class ClienteSoapServiceImpl implements ClienteSoapService{
 	@Override
 	public OrdenTransferenciaCT5ResponseDto getOrdenTransferenciaSoapCT5(
 			OrdenTransferenciaSoapCT5RequestDto ordenTransferenciaSoapCT5RequestDto) throws Exception {
+		log.info("Ingresando al servicio  Soap getOrdenTransferenciaSoapCT5 ");
+
 		WsBTRecepcionTINExecute wsBTRecepcionTINExecute =clienteSoapMapper.getCT5SoapMapper(ordenTransferenciaSoapCT5RequestDto);
 		WsBTRecepcionTINExecuteResponse response = clientSoap.getWsBTRecepcionTIN(wsBTRecepcionTINExecute);
 		
 		OrdenTransferenciaCT5ResponseDto responseCT5 = clienteSoapMapper.getCT5ResponseSoapMappper(response);
+		log.info("Fin del  servicio  Soap getOrdenTransferenciaSoapCT5");
+
 		return responseCT5;
 	}
 	

@@ -16,7 +16,8 @@ public class EchoTestMapper {
 
 
 	public EchoTestResponseET2Dto getEchoTest1(EchoTestRequestET1Dto request) {
-		logger.info("Echo Test ET1 Mapper ");
+		logger.info("Ingresando  al mappeo de atributos en getEchoTest1 ");
+
 		EchoTestResponseET2Dto echoTestResponseET2Dto = new EchoTestResponseET2Dto();
 		ET2 et2 = new ET2();
 		et2.setParticipantCode(request.getEt1().getParticipantCode());
@@ -26,6 +27,8 @@ public class EchoTestMapper {
 		et2.setReasonCode(null);
 		et2.setTrace(request.getEt1().getTrace());
 		echoTestResponseET2Dto.setEt2(et2);
+		
+		logger.info("Fin del mappeo de atributos en getEchoTest1 ");
 		return echoTestResponseET2Dto;
 		
 		
