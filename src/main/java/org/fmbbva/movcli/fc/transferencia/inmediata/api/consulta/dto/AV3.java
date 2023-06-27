@@ -2,6 +2,15 @@ package org.fmbbva.movcli.fc.transferencia.inmediata.api.consulta.dto;
 
 public class AV3 {
 
+	public String getReasonCode() {
+		return reasonCode;
+	}
+
+
+	public void setReasonCode(String reasonCode) {
+		this.reasonCode = reasonCode;
+	}
+
 	public String debtorParticipantCode;
     public String creditorParticipantCode;
     public String creationDate;
@@ -20,7 +29,7 @@ public class AV3 {
     public String channel;
     public String instructionId;
     public String responseCode;
-	public String creditorName;
+	public String reasonCode;
     public String creditorAddressLine;
 	public String creditorId;
     public String creditorPhoneNumber;
@@ -35,11 +44,12 @@ public class AV3 {
 		super();
 	}
 
+	
 	public AV3(String debtorParticipantCode, String creditorParticipantCode, String creationDate, String creationTime,
 			String terminalId, String retrievalReferenceNumber, String trace, String branchId, String debtorName,
 			String debtorId, String debtorIdCode, String debtorPhoneNumber, String debtorAddressLine,
 			String debtorMobileNumber, String transactionType, String channel, String instructionId,
-			String responseCode, String creditorName, String creditorAddressLine, String creditorId,
+			String responseCode, String reasonCode, String creditorAddressLine, String creditorId,
 			String creditorPhoneNumber, String creditorMobileNumber, String creditorCCI, String sameCustomerFlag,
 			String proxyValue, String proxyType, String currency) {
 		super();
@@ -61,7 +71,7 @@ public class AV3 {
 		this.channel = channel;
 		this.instructionId = instructionId;
 		this.responseCode = responseCode;
-		this.creditorName = creditorName;
+		this.reasonCode = reasonCode;
 		this.creditorAddressLine = creditorAddressLine;
 		this.creditorId = creditorId;
 		this.creditorPhoneNumber = creditorPhoneNumber;
@@ -72,6 +82,7 @@ public class AV3 {
 		this.proxyType = proxyType;
 		this.currency = currency;
 	}
+
 
 	public String getDebtorParticipantCode() {
 		return debtorParticipantCode;
@@ -215,14 +226,6 @@ public class AV3 {
 
 	public void setResponseCode(String responseCode) {
 		this.responseCode = responseCode;
-	}
-
-	public String getCreditorName() {
-		return creditorName;
-	}
-
-	public void setCreditorName(String creditorName) {
-		this.creditorName = creditorName;
 	}
 
 	public String getCreditorAddressLine() {
